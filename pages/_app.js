@@ -1,15 +1,14 @@
 import "../styles/globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Nav from "../src/components/Nav/Nav";
+import Layout from "../src/components/Layout/Layout";
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Nav />
+    <Layout>
       <Component {...pageProps} />
-    </>
+    </Layout>
   );
 }
 
