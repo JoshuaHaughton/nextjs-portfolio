@@ -8,7 +8,7 @@ import GithubLogo from "../../../public/github-logo.svg";
 const ProjectCard = ({
   title,
   techStack,
-  projectDescription,
+  description,
   projectImage,
   githubLink,
   demoLink,
@@ -20,12 +20,15 @@ const ProjectCard = ({
           src={projectImage}
           alt={`${title} Photo`}
           className={classes.image}
+          quality={100}
+          priority={true}
+          unoptimized={true}
         />
         <div className={classes.project_background}></div>
         <div className={classes.description}>
           <h3 className={classes.title}>{title}</h3>
           <h4 className={classes.subtitle}>{techStack}</h4>
-          <p className={classes.description_paragraph}>{projectDescription}</p>
+          <p className={classes.description_paragraph}>{description}</p>
           <div className={classes.description_links}>
             <a
               href={githubLink}
