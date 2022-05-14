@@ -1,3 +1,7 @@
+.landing_container {
+  min-height: 100vh;
+}
+
 .landing {
   position: absolute;
   top: 50%;
