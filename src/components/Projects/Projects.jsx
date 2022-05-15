@@ -4,7 +4,7 @@ import projects from "./projectData";
 
 const Projects = () => {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="projects">
       <div className={classes.row}>
         <h1>
           Here are some of my

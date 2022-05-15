@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import LinkedinLogo from "../../../public/linkedin-logo.svg";
 import GithubLogo from "../../../public/github-logo.svg";
 import classes from "./Landing.module.css";
@@ -63,6 +63,26 @@ const Landing = () => {
           </div>
         </div>
       </header>
+
+      <Link href="#">
+        <a >
+          <button 
+            className={classes.contact_button} 
+            // onclick="toggleModal()"
+            >
+            {/* <i className="fas fa-envelope"></i> */}
+            <FontAwesomeIcon icon={faEnvelope} />
+          </button>
+        </a>
+      </Link>
+
+      <Link href="#projects">
+        <a className={classes.scroll}>
+          <div className={classes.scroll_icon}></div>
+        </a>
+      </Link>
+
+
     </div>
   );
 };
