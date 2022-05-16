@@ -6,6 +6,9 @@
 
 .showModal {
   opacity: 0;
+  transition: all 900ms ease;
+  /* display: none; */
+  /* height: 0px; */
 }
 
 .row {
@@ -25,4 +28,37 @@
   text-align: center;
   font-size: 48px;
   margin-bottom: 60px;
+}
+
+@media(max-width: 820px) {
+  /* .showModal > .row {
+    max-height: 1px;
+    overflow: hidden;
+  } */
+
+  .showModal {
+    animation: slideout 0.5s forwards;
+    height: 0px;
+  }
+  
+  @keyframes slideout {
+    from {
+      height: var(--h);
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      height:0; /*This will change for each element */
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .row {
+    max-width: none;
+    padding: 0;
+  }
 }

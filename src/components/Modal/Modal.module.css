@@ -318,3 +318,57 @@
   font-weight: 700;
 }
 
+@media (max-width: 935px) {
+  .language {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 820px) {
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none;
+    height: fit-content;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .paragraph {
+    max-width: fit-content;
+  }
+
+  .modal_half {
+    width: 100%;
+  }
+
+  .modal_contact {
+    padding-bottom: 64px;
+  }
+
+  .modal_about {
+    padding: 40px 18px;
+  }
+
+  .language {
+    padding: 16px;
+  }
+
+  .language_name {
+    bottom: -16px;
+  }
+}
+
+@media(max-width: 450px) {
+  .language {
+    width: 25%;
+  }
+}
+
+@media(max-width: 350px) {
+  .language {
+    display: none;
+  }
+}

@@ -12,8 +12,6 @@ import classes from "../styles/Home.module.css";
 // import pdf from '../public/JoshuaHaughtonResume.pdf'
 
 export default function Home() {
-
-
   return (
     <div className={classes.container}>
       <Head>
@@ -22,17 +20,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Landing  />
-      <Projects  />
+      <Landing />
+      <Projects />
 
-
-
-
-        <ContactButton />
-
-
-      <Modal  />
-
+      <ContactButton />
+      <Modal />
     </div>
   );
 }

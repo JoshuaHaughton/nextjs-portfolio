@@ -139,6 +139,8 @@
 }
 
 
+
+
 @media (max-width: 768px) {
   .greeting {
     font-size: 80px;
@@ -155,9 +157,14 @@
 
 
 
+
+
+
+
+
 @media (max-width: 480px) {
   .greeting {
-    font-size: 80px;
+    font-size: 52px;
   }
   .landing_description {
     font-size: 20px;

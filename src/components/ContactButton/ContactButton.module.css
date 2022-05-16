@@ -22,3 +22,7 @@
 .contact_button:active {
   transform: scale(0.8);
 }
+
+.showModal {
+  opacity: 0;
+}

@@ -82,4 +82,8 @@
   .link:first-child {
     display: none;
   }
+
+  .nav {
+    padding: 0 16px;
+  }
 }
