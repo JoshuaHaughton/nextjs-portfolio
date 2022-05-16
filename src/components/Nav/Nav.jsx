@@ -8,9 +8,13 @@ import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 //Needs to toggle modal
 //Needs to toggle dark mode
 
-const Nav = () => {
+const Nav = ({showModal}) => {
+
+  let navClasses = classes.nav
+
+  showModal && (navClasses = `${classes.nav} ${classes.showModal}`)
   return (
-    <nav className={classes.nav}>
+    <nav className={navClasses}>
       <figure>
         <Image className={classes.logo} src={logo} alt="Josh Haughton Logo" height={50} width={50} />
       </figure>

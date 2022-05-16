@@ -6,11 +6,15 @@ import GithubLogo from "../../../public/github-logo.svg";
 import classes from "./Landing.module.css";
 import Image from "next/image";
 
-const Landing = () => {
+const Landing = ({ showModal }) => {
   //Add toggle modal on text
 
+  let containerClasses = classes.landing_container
+
+  showModal && (containerClasses = `${classes.landing_container} ${classes.showModal}`)
+
   return (
-    <div className={classes.landing_container}>
+    <div className={containerClasses}>
       <header className={classes.landing}>
         <div className={classes.landing_content}>
           <h1 className={classes.greeting}>Hey,</h1>

@@ -1,5 +1,6 @@
 .landing_container {
   min-height: 100vh;
+  transition: all 1800ms ease;
 }
 
 .landing {
@@ -156,6 +157,10 @@
 
 .secondary {
   color: #1f59ed;
+}
+
+.showModal {
+  opacity: 0;
 }
 
 
