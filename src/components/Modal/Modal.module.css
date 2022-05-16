@@ -38,7 +38,7 @@
 
 .modal_open {
   z-index: 60;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  box-shadow: 0 20px 60px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
 }
 
@@ -85,16 +85,12 @@
   flex-wrap: wrap;
   margin-top: 4px;
   flex: 1;
-  /* min-height: 30%; */
 }
 
 .language {
   width: 20%;
   aspect-ratio: 1 / 1;
-  /* height: auto; */
-  /* height: fit-content; */
-  /* height: 50%; */
-  padding: 12px;
+  padding: 16px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -106,7 +102,6 @@
 .language > figure {
   height: 100%;
   width: 100%;
-  /* width: fit-content; */
   padding: 0;
 }
 
@@ -177,6 +172,17 @@
   color: white;
   font-size: 36px;
   z-index: 101;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.modal_exit:hover {
+  transform: scale(1.1);
+  color: #ba181b;
+}
+
+.modal_exit:active {
+  transform: scale(0.8);
 }
 
 .form_item {
@@ -214,6 +220,15 @@
   border-radius: 8px;
 }
 
+.textarea {
+  resize: vertical;
+  height: 64px;
+  margin-top: 16px;
+  border: 3px solid #929292;
+  border-radius: 8px;
+  padding: 12px;
+}
+
 .form_submit {
   background-color: #1f59ed;
   border: 2px solid #1f59ed;
@@ -226,6 +241,7 @@
   border-radius: 4px;
   margin-top: 16px;
   transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .form_submit:hover {
@@ -237,7 +253,7 @@
 .form_submit:active {
   border-color: #1f59ed;
   color: #1f59ed;
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .overlay {

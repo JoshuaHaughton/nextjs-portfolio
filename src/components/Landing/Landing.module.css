@@ -3,6 +3,10 @@
   transition: all 1800ms ease;
 }
 
+.showModal {
+  opacity: 0;
+}
+
 .landing {
   position: absolute;
   top: 50%;
@@ -35,12 +39,11 @@
 
 .description_hover {
   transition: all 300ms ease;
+  cursor: pointer;
 }
 
 .description_hover:hover {
-  cursor: pointer;
   color: blue;
-  font-size: 24.9px;
 }
 
 .socials_list {
@@ -60,12 +63,13 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.2);
   transition: all 400ms ease;
 }
 
 .social_link:hover {
   box-shadow: 0 6px 10px 0 rgb(0, 0, 0, 0.3);
+  transform: scale(1.1);
   filter: brightness(0.85);
 }
 
@@ -79,31 +83,6 @@
 
 .social_logo {
   color: white;
-}
-
-.contact_button {
-  width: 70px;
-  height: 70px;
-  font-size: 32px;
-  border-radius: 50%;
-  border: none;
-  background-color: #242424;
-  color: white;
-  position: fixed;
-  bottom: 32px;
-  right: 40px;
-  z-index: 100;
-  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.5);
-  transition: all 300ms ease;
-  cursor: pointer;
-}
-
-.contact_button:hover {
-  transform: scale(1.1);
-}
-
-.contact_button:active {
-  transform: scale(0.8);
 }
 
 .scroll {
@@ -157,10 +136,6 @@
 
 .secondary {
   color: #1f59ed;
-}
-
-.showModal {
-  opacity: 0;
 }
 
 

@@ -1,28 +1,37 @@
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import ContactButton from "../src/components/ContactButton/ContactButton";
 import Landing from "../src/components/Landing/Landing";
 import Modal from "../src/components/Modal/Modal";
 import Projects from "../src/components/Projects/Projects";
-import styles from "../styles/Home.module.css";
+import classes from "../styles/Home.module.css";
 // import pdf from '../public/JoshuaHaughtonResume.pdf'
 
-export default function Home({showModal, setShowModal}) {
-  
+export default function Home() {
+
 
   return (
-    <div className={styles.container}>
+    <div className={classes.container}>
       <Head>
         <title>Josh Haughton's Portolio</title>
         <meta name="description" content="Josh Haughton Portfolio Site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <button onClick={() => setShowModal(prev => !prev)}>Open Modal</button>
-      <Landing showModal={showModal} />
-      <Projects showModal={showModal} />
-      <Modal showModal={showModal} setShowModal={setShowModal} />
-      {/* <Modal onClose={() => setShowModal(false)} show={showModal} /> */}
+      <Landing  />
+      <Projects  />
+
+
+
+
+        <ContactButton />
+
+
+      <Modal  />
 
     </div>
   );

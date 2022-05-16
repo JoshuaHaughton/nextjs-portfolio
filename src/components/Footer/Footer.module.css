@@ -4,6 +4,11 @@
   background-color: #242424;
   display: flex;
   padding: 8px 0;
+  transition: all 900ms ease;
+}
+
+.showModal {
+  opacity: 0;
 }
 
 .container {
@@ -61,7 +66,7 @@
 }
 
 .logo_img:hover {
-  filter: invert(0.9);
+  filter: invert(0.95);
   transform: scale(1.1);
 }
 
@@ -86,7 +91,6 @@
 
 .social_link:hover {
   opacity: 0.8;
-  font-size: 17px;
   color: #1e78ff;
 }
 

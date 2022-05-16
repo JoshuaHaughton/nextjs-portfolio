@@ -1,17 +1,22 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import LinkedinLogo from "../../../public/linkedin-logo.svg";
 import GithubLogo from "../../../public/github-logo.svg";
 import classes from "./Landing.module.css";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { modalActions } from "../../store/modal";
 
-const Landing = ({ showModal }) => {
-  //Add toggle modal on text
+const Landing = () => {
+
+  const showModal = useSelector((state) => state.modal.showModal);
+  const dispatch = useDispatch()
 
   let containerClasses = classes.landing_container
 
   showModal && (containerClasses = `${classes.landing_container} ${classes.showModal}`)
+
 
   return (
     <div className={containerClasses}>
@@ -30,7 +35,7 @@ const Landing = ({ showModal }) => {
             <b className={classes.secondary}> Frontend Software Engineer.</b>
             <br />
             Here's a bit more
-            <b className={`${classes.description_hover} ${classes.secondary}`}>
+            <b className={`${classes.description_hover} ${classes.secondary}`} onClick={() => dispatch(modalActions.toggleModal())}>
               {" "}
               about me:
             </b>
@@ -68,17 +73,15 @@ const Landing = ({ showModal }) => {
         </div>
       </header>
 
-      <Link href="#">
+      {/* <Link href="#">
         <a >
           <button 
             className={classes.contact_button} 
-            // onclick="toggleModal()"
             >
-            {/* <i className="fas fa-envelope"></i> */}
             <FontAwesomeIcon icon={faEnvelope} />
           </button>
         </a>
-      </Link>
+      </Link> */}
 
       <Link href="#projects">
         <a className={classes.scroll}>

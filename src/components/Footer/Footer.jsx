@@ -4,10 +4,19 @@ import classes from "./Footer.module.css";
 import Logo from "../../../public/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
+
+
+  const showModal = useSelector((state) => state.modal.showModal);
+
+  let footerClasses = classes.footer
+
+  showModal && (footerClasses = `${classes.footer} ${classes.showModal}`)
+
   return (
-    <footer className={classes.footer}>
+    <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.row}>
           <Link href="#">

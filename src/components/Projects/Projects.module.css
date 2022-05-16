@@ -1,6 +1,11 @@
 .container {
   padding: 50px 0;
   width: 100%;
+  transition: all 900ms ease;
+}
+
+.showModal {
+  opacity: 0;
 }
 
 .row {

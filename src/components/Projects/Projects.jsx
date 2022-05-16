@@ -1,10 +1,17 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
 import classes from "./Projects.module.css";
 import projects from "./projectData";
+import { useSelector } from "react-redux";
 
 const Projects = () => {
+  const showModal = useSelector((state) => state.modal.showModal);
+  
+  let projectsClasses = classes.container
+
+  showModal && (projectsClasses = `${classes.container} ${classes.showModal}`)
+  
   return (
-    <div className={classes.container} id="projects">
+    <div className={projectsClasses} id="projects">
       <div className={classes.row}>
         <h1>
           Here are some of my

@@ -1,8 +1,3 @@
-.container {
-  padding: 0 2rem;
-  overflow: visible;
-}
-
 .contact_button {
   width: 70px;
   height: 70px;
@@ -26,11 +21,4 @@
 
 .contact_button:active {
   transform: scale(0.8);
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }

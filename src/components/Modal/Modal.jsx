@@ -7,17 +7,24 @@ import typescriptIcon from '../../../public/typescript.svg'
 import mongoDBIcon from '../../../public/mongodb-icon.svg'
 import firebaseIcon from '../../../public/firebase-icon.svg'
 import Image from "next/image";
+import { useSelector, useDispatch } from "react-redux";
+import { modalActions } from "../../store/modal";
 
-export default function Modal({ showModal, setShowModal }) {
+export default function Modal() {
   // const [open, setOpen] = useState()
-
+  
   //open should change css classes to lower opacity and remove from screen, not take off of dom
-
+  
   // meaning dont use open && (...) lol
-
+  
   //Default classes (Closed)
-
+  
   //Make modal not move from center (fixed)
+
+  const showModal = useSelector((state) => state.modal.showModal);
+  const dispatch = useDispatch()
+
+
   let modalClasses = classes.modal;
   let aboutHalfClasses = `${classes.modal_half} ${classes.modal_about}`;
   let contactHalfClasses = `${classes.modal_half} ${classes.modal_contact}`;
@@ -40,11 +47,11 @@ export default function Modal({ showModal, setShowModal }) {
           <p className={classes.paragraph}>
             I'm a 21 year-old
             <span className={`${classes.secondary} ${classes.bold}`}>
-              fullstack software engineer
+            {" "}fullstack software engineer
             </span>{" "}
             with a passion for building apps and websites with an exceptional
             <span className={`${classes.secondary} ${classes.bold}`}>
-              user experience.
+            {" "}user experience.
             </span>
             <br />
             <br />
@@ -53,11 +60,11 @@ export default function Modal({ showModal, setShowModal }) {
             <br />
             The
             <span className={`${classes.secondary} ${classes.bold}`}>
-              copywriting, user-based design,
+            {" "}copywriting, user-based design,{" "}
             </span>
             and
             <span className={`${classes.secondary} ${classes.bold}`}>
-              customer psychology skills
+            {" "}customer psychology skills
             </span>{" "}
             I've acquired through marketing for E-Commerce brands have been
             essential in allowing me to quickly learn how to craft interfaces
@@ -217,7 +224,7 @@ export default function Modal({ showModal, setShowModal }) {
 
         <div className={contactHalfClasses}>
           {/* <i className="fas fa-times modal__exit click" onclick="toggleModal()"></i> */}
-          <FontAwesomeIcon icon={faTimes} className={classes.modal_exit} />
+          <FontAwesomeIcon icon={faTimes} className={classes.modal_exit} onClick={() => dispatch(modalActions.closeModal())} />
           <h3 className={classes.title}>Let's have a chat!</h3>
           <h4 className={classes.subtitle}>
             I'm currently open to new opportunities.
