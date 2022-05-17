@@ -15,9 +15,6 @@ const ProjectCard = ({
   demoLink
 }) => {
 
-
-  
-
   let projectClasses = classes.project
 
   darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`)
@@ -45,12 +42,13 @@ const ProjectCard = ({
               target="_blank"
               className={classes.description_link}
             >
-              {/* <i className="fab fa-github"></i> */}
               <figure className={classes.figure}>
                 <Image
                   src={GithubLogo}
                   layout={"fill"}
                   className={classes.github_logo}
+                  quality={100}
+                  priority={true}
                 />
               </figure>
             </a>
@@ -59,7 +57,6 @@ const ProjectCard = ({
               target="_blank"
               className={classes.description_link}
             >
-              {/* <i className="fas fa-link"></i> */}
               <FontAwesomeIcon icon={faLink} />
             </a>
           </div>
