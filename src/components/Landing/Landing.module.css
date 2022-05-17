@@ -1,6 +1,6 @@
 .landing_container {
-  min-height: 100vh;
-  transition: all 1800ms ease;
+  min-height: calc(100vh - 100px);
+  transition: all 900ms ease;
 }
 
 .showModal {
@@ -104,7 +104,7 @@
   visibility: visible;
   transition: all 600ms 600ms;
   position: absolute;
-  bottom: 20px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;

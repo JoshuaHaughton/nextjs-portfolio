@@ -1,6 +1,6 @@
 import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import classes from "./Modal.module.css";
 import nextjsIcon from '../../../public/next-js-icon.svg'
 import typescriptIcon from '../../../public/typescript.svg'
@@ -8,9 +8,16 @@ import mongoDBIcon from '../../../public/mongodb-icon.svg'
 import firebaseIcon from '../../../public/firebase-icon.svg'
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
-import { modalActions } from "../../store/modal";
+import modal, { modalActions } from "../../store/modal";
+import emailjs from '@emailjs/browser';
 
 export default function Modal() {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [nameInput, setNameInput] = useState('')
+  const [emailInput, setEmailInput] = useState('')
+  const [textareaInput, setTextareaInput] = useState('')
+  const form = useRef();
   // const [open, setOpen] = useState()
   
   //open should change css classes to lower opacity and remove from screen, not take off of dom
@@ -36,6 +43,55 @@ export default function Modal() {
     : ((modalClasses = `${classes.modal} ${classes.modal_open}`),
       (aboutHalfClasses = `${classes.modal_half} ${classes.modal_about} ${classes.modal_about_open}`),
       (contactHalfClasses = `${classes.modal_half} ${classes.modal_contact} ${classes.modal_contact_open}`));
+
+      const contactMe = async (event) => {
+        event.preventDefault();
+
+        setLoading(true);
+    
+        console.log('sending');
+      
+        emailjs
+          .sendForm(
+            "service_3ke2bn5",
+            "template_sbg618g",
+            form.current,
+            "user_Nv7IGGmuawZuYuuauHS6i",
+          )
+          .then((result) => {
+            console.log('sent', result);
+            setLoading(false)
+            setSuccess(true)
+
+            setEmailInput("")
+            setNameInput("")
+            setTextareaInput("")
+            
+            setTimeout(() => {
+              dispatch(modalActions.closeModal())
+            }, 1500)
+            
+            setTimeout(() => {
+              setSuccess(false)
+            }, 2500)
+          })
+          .catch((err) => {
+
+            setLoading(false)
+
+            console.log(err);
+
+            alert(
+              "The email service is temporarily unavailable. Please contact me directly at itsjoshuahaughton@gmail.com",
+            );
+          });
+      };
+
+      let loadingClasses = `${classes.overlay} ${classes.overlay_loading}`
+      let successClasses = `${classes.overlay} ${classes.overlay_success}`
+
+      loading && (loadingClasses = `${loadingClasses} ${classes.overlay_visible}`)
+      success && (successClasses = `${successClasses} ${classes.overlay_visible}`)
 
 
   return (
@@ -250,7 +306,7 @@ export default function Modal() {
             I'm currently open to new opportunities.
           </h4>
 
-          <form action="" id="contact_form">
+          <form onSubmit={contactMe}  id="contact_form" ref={form}>
             {/* <form action="" id="contact__form" onsubmit="contact(event)"> */}
             <div className={classes.form_item}>
               <label>Name</label>
@@ -259,6 +315,8 @@ export default function Modal() {
                 className={classes.input}
                 name="user_name"
                 required
+                onChange={(e) => setNameInput(e.target.value)}
+                value={nameInput}
               />
             </div>
             <div className={classes.form_item}>
@@ -268,6 +326,8 @@ export default function Modal() {
                 className={classes.input}
                 name="user_email"
                 required
+                onChange={(e) => setEmailInput(e.target.value)}
+                value={emailInput}
               />
             </div>
             <div className={classes.form_item}>
@@ -278,22 +338,27 @@ export default function Modal() {
                 // className={classes.input}
                 name="message"
                 required
+                onChange={(e) => setTextareaInput(e.target.value)}
+                value={textareaInput}
               ></textarea>
             </div>
-            <button id="contact__submit" className={classes.form_submit}>
+            <button className={classes.form_submit} value="Send" type="submit">
               Send it my way
             </button>
           </form>
-          <div className={`${classes.overlay} ${classes.overlay_loading}`}>
-            {/* <i className="fas fa-spinner"></i> */}
+
+          <div className={loadingClasses}>
             <FontAwesomeIcon
               icon={faSpinner}
               className={classes.spinner_icon}
             />
           </div>
-          <div className={`${classes.overlay} ${classes.overlay_success}`}>
-            Thanks for the message! Looking forward to speaking with you soon.
-          </div>
+
+
+            <div className={successClasses}>
+              Thanks for the message! Looking forward to speaking with you soon.
+            </div>
+
         </div>
       </div>
     </>

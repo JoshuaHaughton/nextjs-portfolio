@@ -1,3 +1,17 @@
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    background-color: transparent !important;
+}
+
+.input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
 .body {
   padding-top: 10px;
   /* box-sizing: content-box; */
