@@ -79,6 +79,8 @@ export default function Modal() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                   alt="Html Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
                 <span className={classes.language_name}>HTML</span>
@@ -92,6 +94,8 @@ export default function Modal() {
                   src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
                   alt="CSS Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
 
@@ -107,6 +111,8 @@ export default function Modal() {
                   src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
                   alt="JavaScript Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
                 <span className={classes.language_name}>JavaScript</span>
@@ -122,6 +128,8 @@ export default function Modal() {
                 src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
                 alt="React Logo"
                 className={classes.language_img}
+                priority={true}
+                  quality={100}
               />
             </figure>
               <span className={classes.language_name}>React.js</span>
@@ -137,6 +145,8 @@ export default function Modal() {
                 src={nextjsIcon}
                 alt="Next.Js Logo"
                 className={classes.language_img}
+                priority={true}
+                  quality={100}
               />
             </figure>
 
@@ -152,6 +162,8 @@ export default function Modal() {
                   src={typescriptIcon}
                   alt="Typescript Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
 
@@ -168,6 +180,8 @@ export default function Modal() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png"
                   alt="Node Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                   objectFit={'contain'}
                 />
               </figure>
@@ -184,6 +198,8 @@ export default function Modal() {
                   src={mongoDBIcon}
                   alt="MongoDB Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
 
@@ -199,6 +215,8 @@ export default function Modal() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
                   alt="PostgreSQL Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
                 <span className={classes.language_name}>PostgreSQL</span>
@@ -214,6 +232,8 @@ export default function Modal() {
                   src={firebaseIcon}
                   alt="Firebase Logo"
                   className={classes.language_img}
+                  priority={true}
+                  quality={100}
                 />
               </figure>
                 <span className={classes.language_name}>Firebase</span>

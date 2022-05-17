@@ -57,7 +57,7 @@
 }
 
 .description_hover:hover {
-  color: blue;
+  color: blue !important;
 }
 
 .socials_list {
@@ -163,11 +163,6 @@
   .landing_description {
     font-size: 20px;
   }
-  .description_hover:hover {
-    cursor: pointer;
-    color: blue;
-    font-size: 20.9px;
-  }
 }
 
 @media(max-width: 600px) {
@@ -183,11 +178,6 @@
   }
   .landing_description {
     font-size: 20px;
-  }
-  .description_hover:hover {
-    cursor: pointer;
-    color: blue;
-    font-size: 20.9px;
   }
 
 }

@@ -4,13 +4,16 @@ import classes from "./Footer.module.css";
 import Logo from "../../../public/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { modalActions } from "../../store/modal";
 
 const Footer = () => {
 
 
   const showModal = useSelector((state) => state.modal.showModal);
   const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+
+  const dispatch = useDispatch()
   
   let footerClasses = classes.footer
   
@@ -29,6 +32,8 @@ const Footer = () => {
                   layou={"fill"}
                   src={Logo}
                   alt="Joshua Haughton"
+                  priority={true}
+                  quality={100}
                 />
               </figure>
               <span className={classes.logo_popup}>
@@ -57,14 +62,12 @@ const Footer = () => {
               </a>
             </Link>
 
-            <Link href="#">
               <a
-                // onclick="toggleModal()"
+                onClick={() => dispatch(modalActions.toggleModal())}
                 className={classes.social_link}
               >
                 Contact
               </a>
-            </Link>
 
             <Link href={"/JoshuaHaughtonResume.pdf"}>
               <a

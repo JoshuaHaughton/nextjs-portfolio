@@ -24,7 +24,7 @@
   position: relative;
   z-index: 10;
   border-radius: 20px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  box-shadow: 0 20px 56px 0 rgb(0, 0, 0, 0.45);
   overflow: hidden;
   display: flex;
   transition: all 450ms ease;

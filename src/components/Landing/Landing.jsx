@@ -54,6 +54,8 @@ const Landing = () => {
                   height={17}
                   width={17}
                   className={classes.social_logo}
+                  priority={true}
+                  quality={100}
                 />
               </a>
             </Link>
@@ -65,6 +67,8 @@ const Landing = () => {
                   height={18}
                   width={18}
                   className={classes.social_logo}
+                  priority={true}
+                  quality={100}
                 />
               </a>
             </Link>
