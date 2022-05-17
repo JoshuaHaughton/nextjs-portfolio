@@ -10,11 +10,13 @@ const Footer = () => {
 
 
   const showModal = useSelector((state) => state.modal.showModal);
-
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+  
   let footerClasses = classes.footer
-
+  
   showModal && (footerClasses = `${classes.footer} ${classes.showModal}`)
-
+  darkMode && (footerClasses = `${footerClasses} ${classes.darkMode}`)
+  
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>

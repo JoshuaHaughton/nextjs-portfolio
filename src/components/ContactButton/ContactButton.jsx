@@ -8,14 +8,17 @@ import Link from "next/link";
 
 const ContactButton = () => {
   const showModal = useSelector((state) => state.modal.showModal);
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+  
   const isBreakpoint820 = useMediaQuery(820)
   const dispatch = useDispatch()
   
   
-
+  
   let buttonClasses = classes.contact_button
-
+  
   showModal && (buttonClasses = `${classes.contact_button} ${classes.showModal}`)
+  darkMode && (buttonClasses = `${buttonClasses} ${classes.darkMode}`)
 
 
   return (

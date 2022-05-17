@@ -12,6 +12,28 @@
   /* display: none; */
 }
 
+.darkMode {
+  background-color: #fff;
+  filter: brightness(0.95);
+}
+
+.darkMode > div > div > div > a,
+.darkMode > div > div > div
+ {
+  color: #242424;
+  font-weight: 600;
+}
+
+.darkMode > div > div > a > figure > span > img {
+  filter: none;
+}
+
+.darkMode > div > div > a > figure > span > img:hover {
+  filter: none;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -88,7 +110,7 @@
 .copyright {
   color: white;
   position: relative;
-  transition: all 450ms ease;
+  transition: all 550ms ease;
   text-align: center;
 }
 

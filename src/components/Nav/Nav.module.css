@@ -15,6 +15,18 @@
   opacity: 0;
 }
 
+.darkMode > ul > li > a {
+  color: white;
+}
+
+.darkMode > figure {
+  filter: invert(1);
+}
+
+.darkMode > ul > li > .link_hover:after {
+  background-color: #fff;
+}
+
 .nav > figure {
   margin: 0;
 }
@@ -47,7 +59,7 @@
   height: 3px;
   width: 0;
   right: 0;
-  transition: all 450ms ease;
+  transition: all 550ms ease;
 }
 
 .link_hover:after {

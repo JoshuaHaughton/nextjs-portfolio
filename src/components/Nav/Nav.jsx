@@ -6,15 +6,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../../store/modal";
+import { darkModeActions } from "../../store/darkMode";
 
 const Nav = () => {
 
   const showModal = useSelector((state) => state.modal.showModal);
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+  
   const dispatch = useDispatch()
-
+  
   let navClasses = classes.nav
-
+  
   showModal && (navClasses = `${classes.nav} ${classes.showModal}`)
+  darkMode && (navClasses = `${navClasses} ${classes.darkMode}`)
 
   return (
     <nav className={navClasses}>
@@ -50,7 +54,7 @@ const Nav = () => {
         </li>
 
 
-        <li className={`${classes.link} ${classes.button}`}>
+        <li className={`${classes.link} ${classes.button}`} onClick={() => dispatch(darkModeActions.toggleDarkMode())}>
           {/* <li className="nav__link click" onclick="toggleContrast()"> */}
           <a className={classes.link_anchor}>
             <FontAwesomeIcon icon={faAdjust} />

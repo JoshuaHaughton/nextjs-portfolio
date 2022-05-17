@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialModalState = { showModal: false };
 
-//Cart Reducers
+//Modal Reducers
 const modalSlice = createSlice({
   name: "modal",
   initialState: initialModalState,

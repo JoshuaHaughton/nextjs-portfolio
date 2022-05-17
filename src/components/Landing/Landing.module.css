@@ -7,6 +7,20 @@
   opacity: 0;
 }
 
+.darkMode > header > div > p,
+.darkMode > header > div > .greeting {
+  color: white;
+} 
+
+.darkMode > .scroll > .scroll_icon {
+  border: 2px solid #fff;
+}
+
+.darkMode > .scroll > .scroll_icon:after {
+  background-color: #fff;
+}
+
+
 .landing {
   position: absolute;
   top: 50%;
@@ -135,8 +149,9 @@
 }
 
 .secondary {
-  color: #1f59ed;
+  color: #1f59ed !important;
 }
+
 
 
 
@@ -155,11 +170,11 @@
   }
 }
 
-
-
-
-
-
+@media(max-width: 600px) {
+  .landing_container {
+    min-height: 90vh;
+  }
+}
 
 
 @media (max-width: 480px) {
@@ -174,4 +189,5 @@
     color: blue;
     font-size: 20.9px;
   }
+
 }

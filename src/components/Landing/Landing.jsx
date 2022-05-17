@@ -11,11 +11,16 @@ import { modalActions } from "../../store/modal";
 const Landing = () => {
 
   const showModal = useSelector((state) => state.modal.showModal);
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+  
+  
+  
   const dispatch = useDispatch()
-
+  
   let containerClasses = classes.landing_container
-
+  
   showModal && (containerClasses = `${classes.landing_container} ${classes.showModal}`)
+  darkMode && (containerClasses = `${containerClasses} ${classes.darkMode}`)
 
 
   return (

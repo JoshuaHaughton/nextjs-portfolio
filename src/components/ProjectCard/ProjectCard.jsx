@@ -6,15 +6,25 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import GithubLogo from "../../../public/github-logo.svg";
 
 const ProjectCard = ({
+  darkMode,
   title,
   techStack,
   description,
   projectImage,
   githubLink,
-  demoLink,
+  demoLink
 }) => {
+
+
+  
+
+  let projectClasses = classes.project
+
+  darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`)
+
+
   return (
-    <li className={classes.project}>
+    <li className={projectClasses}>
       <div className={classes.project_wrapper}>
         <Image
           src={projectImage}
