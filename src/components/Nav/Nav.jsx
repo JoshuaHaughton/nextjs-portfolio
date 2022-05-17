@@ -22,10 +22,12 @@ const Nav = () => {
 
   return (
     <nav className={navClasses}>
-      <figure>
-        <Image className={classes.logo} src={logo} alt="Josh Haughton Logo" height={50} width={50} priority={true}
-                  quality={100} />
-      </figure>
+      <Link href={"#"}>
+        <figure>
+          <Image className={classes.logo} src={logo} alt="Josh Haughton Logo" height={50} width={50} priority={true}
+                    quality={100} />
+        </figure>
+      </Link>
       <ul className={classes.link_list}>
 
         <li className={classes.link} onClick={() => dispatch(modalActions.toggleModal())}>

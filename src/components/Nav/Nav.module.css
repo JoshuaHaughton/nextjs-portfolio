@@ -29,6 +29,16 @@
 
 .nav > figure {
   margin: 0;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+.nav > figure:hover {
+  transform: scale(1.05);
+}
+
+.nav > figure:active {
+  transform: scale(0.97);
 }
 
 .link_list {
