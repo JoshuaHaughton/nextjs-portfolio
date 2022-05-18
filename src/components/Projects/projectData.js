@@ -6,7 +6,7 @@ import AirbnbProjectPhoto from "../../../public/Airbnb-Remake.png";
 
 const projects = [
   {
-    title: "E-Commerce App - Vinyl Fresh",
+    title: "Vinyl Fresh",
     techStack: "React.js, Redux, Typescript, Firebase",
     description: `An E-Commerce application where users can browse and order
              vinyl record covers based on popular album covers. Users can
@@ -15,11 +15,13 @@ const projects = [
     projectImage: EcomProjectPhoto,
     githubLink: "https://github.com/JoshuaHaughton/vinyl-shop",
     demoLink: "https://vinyl-fresh.netlify.app/",
+    primary: "0652b4",
+    secondary: "8e8d8d"
   },
 
 
   {
-    title: "Movie Finder/Saver - Watchlist",
+    title: "Watchlist",
     techStack: "React.js, Node.js, Express.js MongoDB",
     description: `A media searching app where users can search and find
     detailed descriptions of their favourite movies and tv
@@ -29,6 +31,8 @@ const projects = [
     projectImage: WatchlistProjectPhoto,
     githubLink: "https://github.com/JoshuaHaughton/watchlist",
     demoLink: "https://watchlist-client.netlify.app/",
+    primary: "ba181b",
+    secondary: "c78f03"
   },
 
 
@@ -42,6 +46,9 @@ const projects = [
     projectImage: LinkedinProjectPhoto,
     githubLink: "https://github.com/JoshuaHaughton/linkedin",
     demoLink: "https://jh-linkedin-clone.netlify.app/",
+    primary: "0177b7",
+    secondary: "8e8d8d"
+    // secondary: "868686"
   },
 
 
@@ -52,8 +59,9 @@ const projects = [
     projectImage: CryptoProjectPhoto,
     githubLink: "https://github.com/JoshuaHaughton/crypto-tracker",
     demoLink: "https://jh-crypto-tracker.vercel.app/",
+    primary: "ff9500",
+    secondary: "8e8d8d"
   },
-
 
   {
     title: "Airbnb Remake",
@@ -65,6 +73,8 @@ const projects = [
     projectImage: AirbnbProjectPhoto,
     githubLink: "https://github.com/JoshuaHaughton/airbnb",
     demoLink: "https://landbnb-xi.vercel.app/",
+    primary: "F87171",
+    secondary: "8e8d8d"
   },
 ];
 

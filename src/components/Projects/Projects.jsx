@@ -30,6 +30,8 @@ const Projects = () => {
               projectImage={project.projectImage}
               githubLink={project.githubLink}
               demoLink={project.demoLink}
+              primary={project.primary}
+              secondary={project.secondary}
             />
           ))}
         </ul>

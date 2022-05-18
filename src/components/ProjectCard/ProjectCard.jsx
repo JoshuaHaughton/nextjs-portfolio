@@ -2,8 +2,10 @@ import classes from "./ProjectCard.module.css";
 // import projectPhoto from "../../../public/Ecom-Project.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import GithubLogo from "../../../public/github-logo.svg";
+import GithubLogo from "../../../public/github-logo.png";
+// import GithubLogo from "../../../public/github-logo.svg";
 
 const ProjectCard = ({
   darkMode,
@@ -12,7 +14,9 @@ const ProjectCard = ({
   description,
   projectImage,
   githubLink,
-  demoLink
+  demoLink, 
+  primary, 
+  secondary
 }) => {
 
   let projectClasses = classes.project
@@ -42,15 +46,7 @@ const ProjectCard = ({
               target="_blank"
               className={classes.description_link}
             >
-              <figure className={classes.figure}>
-                <Image
-                  src={GithubLogo}
-                  layout={"fill"}
-                  className={classes.github_logo}
-                  quality={100}
-                  priority={true}
-                />
-              </figure>
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href={demoLink}
@@ -62,6 +58,17 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
+      <style jsx>{`
+        h3 {
+          color: #${primary};
+        }
+        h4 {
+          color: #${secondary}
+        }
+        a:hover {
+          color: #${primary};
+        }
+      `}</style>
     </li>
   );
 };
