@@ -71,7 +71,7 @@
   transform: translateX(-110%);
   display: flex;
   justify-content: flex-start;
-  padding: 64px 32px;
+  padding: 64px 24px;
 }
 
 .darkModeAbout {
@@ -88,6 +88,10 @@
 
 .modal_about_open {
   transform: translateX(0%);
+}
+
+.modal_about > .title, .modal_about >  .subtitle, .modal_about >  .paragraph {
+  margin-left: 16px;
 }
 
 .title {
@@ -111,6 +115,7 @@
   flex-wrap: wrap;
   margin-top: 4px;
   flex: 1;
+  width: calc(100% + 16px);
 }
 
 .language {
@@ -419,6 +424,10 @@
     width: 100%;
     flex-direction: column-reverse;
     border-radius: 0;
+  }
+
+  .modal_about > .title, .modal_about > .subtitle, .modal_about > .paragraph {
+    padding: 0 14px;
   }
 
   .paragraph {
