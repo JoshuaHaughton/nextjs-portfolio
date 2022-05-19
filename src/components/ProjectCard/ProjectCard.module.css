@@ -55,10 +55,6 @@
   transform: translateY(-50%);
 }
 
-.project_wrapper:hover .image {
-  /* transform: scale(1.07);
-  filter: blur(5px); */
-}
 
 .project_wrapper:hover .project_background {
   opacity: 0.95;
@@ -94,20 +90,6 @@
   width: 23px;
   position: relative;
 }
-
-/* .figure span img {
-  transition: all 300ms ease;
-  overflow: visible;
-}
-
-.figure:hover span img {
-  opacity: 0.4;
-  transform: scale(1.1);
-}
-
-.figure, .figure span {
-  overflow: visible !important;
-} */
 
 .description_link > svg {
   height: 25px;
@@ -191,13 +173,6 @@
     margin-top: 80px;
     list-style-type: none;
   }
-
-  /* .description_link > svg, .description_link  {
-    font-size: 14px;
-    height: 14px;
-    width: 14px;
-  } */
-
 
 }
 

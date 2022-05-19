@@ -29,20 +29,26 @@ export default function Modal() {
   //Make modal not move from center (fixed)
 
   const showModal = useSelector((state) => state.modal.showModal);
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
+  
+
   const dispatch = useDispatch()
-
-
+  
+  
   let modalClasses = classes.modal;
   let aboutHalfClasses = `${classes.modal_half} ${classes.modal_about}`;
   let contactHalfClasses = `${classes.modal_half} ${classes.modal_contact}`;
-
+  
   !showModal
-    ? ((modalClasses = classes.modal),
-      (aboutHalfClasses = `${classes.modal_half} ${classes.modal_about}`),
-      (contactHalfClasses = `${classes.modal_half} ${classes.modal_contact}`))
-    : ((modalClasses = `${classes.modal} ${classes.modal_open}`),
-      (aboutHalfClasses = `${classes.modal_half} ${classes.modal_about} ${classes.modal_about_open}`),
-      (contactHalfClasses = `${classes.modal_half} ${classes.modal_contact} ${classes.modal_contact_open}`));
+  ? ((modalClasses = classes.modal),
+  (aboutHalfClasses = `${classes.modal_half} ${classes.modal_about}`),
+  (contactHalfClasses = `${classes.modal_half} ${classes.modal_contact}`))
+  : ((modalClasses = `${classes.modal} ${classes.modal_open}`),
+  (aboutHalfClasses = `${classes.modal_half} ${classes.modal_about} ${classes.modal_about_open}`),
+  (contactHalfClasses = `${classes.modal_half} ${classes.modal_contact} ${classes.modal_contact_open}`));
+  
+  darkMode && ((aboutHalfClasses = `${aboutHalfClasses} ${classes.darkModeAbout}`), (contactHalfClasses = `${contactHalfClasses} ${classes.darkModeContact}`))
+
 
       const contactMe = async (event) => {
         event.preventDefault();
