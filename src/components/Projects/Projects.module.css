@@ -70,4 +70,9 @@
     max-width: none;
     padding: 0;
   }
+
+  .row > h1 {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
 }

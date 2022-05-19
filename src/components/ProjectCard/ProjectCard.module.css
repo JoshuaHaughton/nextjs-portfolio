@@ -152,7 +152,7 @@
 
   .title {
     padding: 0 16px;
-    font-size: 28px;
+    font-size: 32px;
   }
   .description_paragraph {
     display: none;
@@ -167,6 +167,7 @@
   .subtitle {
     margin-bottom: 8px;
     padding: 0 16px;
+    font-size: 20px;
   }
   .description_links {
     display: flex;
@@ -178,7 +179,7 @@
 
 @media (max-width: 450px) {
   .title {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .subtitle {
@@ -191,5 +192,31 @@
     list-style-type: none;
   }
 
+  /* .description_link > svg, .description_link  {
+    font-size: 14px;
+    height: 14px;
+    width: 14px;
+  } */
+
+
+}
+
+@media (max-width: 280px) {
+  .subtitle {
+    font-size: 3.5vw;
+    margin: 8px 0;
+  }
+
+  .project {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    list-style-type: none;
+  }
+
+  .description_link > svg, .description_link  {
+    font-size: 14px;
+    height: 14px;
+    width: 14px;
+  }
 
 }

@@ -27,3 +27,10 @@
 .contact_button:active {
   transform: scale(0.8);
 }
+
+@media(max-width: 450px) {
+  .container {
+    padding: 0 1rem;
+    overflow: visible;
+  }
+}
