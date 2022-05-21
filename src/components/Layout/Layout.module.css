@@ -2,6 +2,9 @@
   background-color: rgb(245, 245, 245);
   transition: all 300ms ease;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 .darkMode {
