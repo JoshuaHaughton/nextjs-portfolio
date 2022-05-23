@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import classes from './Canvas.module.css'
+import { useSelector } from "react-redux";
+import classes from "./Canvas.module.css";
 
 const Canvas = () => {
   const canvasRef = useRef(null);
+
+  const darkMode = useSelector((state) => state.darkMode.showDarkMode);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -20,25 +23,30 @@ const Canvas = () => {
       radius: (canvas.height / 80) * (canvas.height / 80),
     };
 
-    window.addEventListener("mousemove", (event) => {
+    const mouseMoveEventHandler = (event) => {
       mouse.x = event.x;
       mouse.y = event.y;
-      // console.log(mouse.x, mouse.y);
-    });
+    }
 
-    //resize event
-    window.addEventListener("resize", function () {
-      canvas.width = innerWidth;
-      canvas.height = innerHeight;
-      mouse.radius = (canvas.height / 80) * (canvas.height / 80);
-      init();
-    });
+    const resizeEventHandler = () => {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+        mouse.radius = (canvas.height / 80) * (canvas.height / 80);
+        init();
+    }
 
-    //mouse out event
-    window.addEventListener("mouseout", function () {
+    const mouseOutEventHandler = () => {
       mouse.x = undefined;
       mouse.y = undefined;
-    });
+    }
+
+
+    window.addEventListener("mousemove", mouseMoveEventHandler);
+    //resize event
+    window.addEventListener("resize", resizeEventHandler);
+
+    //mouse out event
+    window.addEventListener("mouseout", mouseOutEventHandler);
 
     class Particle {
       constructor(x, y, directionX, directionY, size, color) {
@@ -47,13 +55,13 @@ const Canvas = () => {
         this.directionX = directionX;
         this.directionY = directionY;
         this.size = size;
-        this.color = color;
+        this.color = darkMode ? "white" : "black";
       }
       //Draw particles
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = "#BCSS23";
+        ctx.fillStyle = this.color;
         ctx.fill();
       }
       //check particle position, check mouse position, move the particle, draw the partiicle
@@ -70,7 +78,6 @@ const Canvas = () => {
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
         let distance = Math.sqrt(dx * dx + dy * dy);
-        // console.log('distance', distance);
 
         if (distance < mouse.radius + this.size) {
           if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
@@ -107,7 +114,7 @@ const Canvas = () => {
         let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
         let directionX = Math.random() * 5 - 2.5;
         let directionY = Math.random() * 5 - 2.5;
-        let color = "#BC5523";
+        let color = 'black';
 
         particleArray.push(
           new Particle(x, y, directionX, directionY, size, color),
@@ -127,7 +134,7 @@ const Canvas = () => {
               (particleArray[a].y - particleArray[b].y);
 
           if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-            opacityValue = 1 - distance / 20000;
+            opacityValue = 1 - distance / 18000;
             ctx.strokeStyle = `rgba(31, 89, 237, ${opacityValue})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -151,7 +158,12 @@ const Canvas = () => {
     }
     init();
     animate();
-  }, []);
+
+    return () => {
+      window.removeEventListener('mousemove', mouseMoveEventHandler);
+      window.removeEventListener("mouseout", mouseOutEventHandler);
+    }
+  }, [darkMode]);
 
   return <canvas className={classes.canvas} ref={canvasRef}></canvas>;
 };
