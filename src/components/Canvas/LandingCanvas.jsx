@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-import classes from "./Canvas.module.css";
+import classes from "./LandingCanvas.module.css";
 
 const Canvas = () => {
   const canvasRef = useRef(null);

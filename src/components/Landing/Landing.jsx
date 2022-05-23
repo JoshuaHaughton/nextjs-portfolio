@@ -8,7 +8,7 @@ import classes from "./Landing.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { modalActions } from "../../store/modal";
-import Canvas from "../Canvas/Canvas";
+import LandingCanvas from "../Canvas/LandingCanvas";
 
 const Landing = () => {
   const showModal = useSelector((state) => state.modal.showModal);
@@ -24,7 +24,7 @@ const Landing = () => {
 
   return (
     <div className={containerClasses}>
-      <Canvas />
+      <LandingCanvas />
       <header className={classes.landing}>
         <div className={classes.landing_content}>
           <h1 className={classes.greeting}>Hey,</h1>
