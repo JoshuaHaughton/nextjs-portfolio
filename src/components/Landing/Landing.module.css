@@ -16,6 +16,10 @@
   color: white;
 } 
 
+.darkMode > header > div > .landing_description {
+  background-color: #242424;
+} 
+
 .darkMode > .scroll > .scroll_icon {
   border: 2px solid #fff;
 }
