@@ -20,26 +20,29 @@ const Canvas = () => {
     const mouse = {
       x: null,
       y: null,
-      radius: (canvas.height / 80) * (canvas.height / 80),
+      radius: (canvas.height / 100) * (canvas.height / 100),
     };
 
     const mouseMoveEventHandler = (event) => {
-      mouse.x = event.x;
-      mouse.y = event.y;
-    }
+      const rect = canvas.getBoundingClientRect(), // abs. size of element
+        scaleX = canvas.width / rect.width, // relationship bitmap vs. element for x
+        scaleY = canvas.height / rect.height; // relationship bitmap vs. element for y
+
+      mouse.x = (event.clientX - rect.left) * scaleX;
+      mouse.y = (event.clientY - rect.top) * scaleY;
+    };
 
     const resizeEventHandler = () => {
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
-        mouse.radius = (canvas.height / 80) * (canvas.height / 80);
-        init();
-    }
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
+      mouse.radius = (canvas.height / 80) * (canvas.height / 80);
+      init();
+    };
 
     const mouseOutEventHandler = () => {
       mouse.x = undefined;
       mouse.y = undefined;
-    }
-
+    };
 
     window.addEventListener("mousemove", mouseMoveEventHandler);
     //resize event
@@ -114,7 +117,7 @@ const Canvas = () => {
         let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
         let directionX = Math.random() * 5 - 2.5;
         let directionY = Math.random() * 5 - 2.5;
-        let color = 'black';
+        let color = "black";
 
         particleArray.push(
           new Particle(x, y, directionX, directionY, size, color),
@@ -160,9 +163,10 @@ const Canvas = () => {
     animate();
 
     return () => {
-      window.removeEventListener('mousemove', mouseMoveEventHandler);
+      window.removeEventListener("mousemove", mouseMoveEventHandler);
       window.removeEventListener("mouseout", mouseOutEventHandler);
-    }
+      window.removeEventListener("resize", resizeEventHandler);
+    };
   }, [darkMode]);
 
   return <canvas className={classes.canvas} ref={canvasRef}></canvas>;

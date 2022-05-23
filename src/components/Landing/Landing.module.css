@@ -61,7 +61,9 @@
   max-width: 600px;
   margin-bottom: 8px;
   transition: all 300ms ease;
-  background-color: rgb(245, 245, 245);
+  /* background-color: rgba(245, 245, 245, 0.9); */
+  background-image: radial-gradient(ellipse farthest-corner at 12px 12px, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 0.8) );
+  border-radius: 16px;
 }
 
 .description_hover {
