@@ -11,16 +11,14 @@ const Canvas = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - 100;
     let particleArray = [];
-
-    console.log("height", canvas.height);
 
     //handle mouse
     const mouse = {
       x: null,
       y: null,
-      radius: (canvas.height / 100) * (canvas.height / 100),
+      radius: (canvas.height / 85) * (canvas.height / 85),
     };
 
     const mouseMoveEventHandler = (event) => {
@@ -35,7 +33,7 @@ const Canvas = () => {
     const resizeEventHandler = () => {
       canvas.width = innerWidth;
       canvas.height = innerHeight;
-      mouse.radius = (canvas.height / 80) * (canvas.height / 80);
+      mouse.radius = (canvas.height / 85) * (canvas.height / 85);
       init();
     };
 
@@ -109,12 +107,13 @@ const Canvas = () => {
     //Create particle array
     function init() {
       particleArray = [];
-      let numberOfParticles = (canvas.height * canvas.width) / 19000;
+      let numberOfParticles = (canvas.height * canvas.width) / 24000;
 
       for (let i = 0; i < numberOfParticles; i++) {
         let size = Math.random() * 5 + 1;
-        let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
-        let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+        let x = Math.random() * (canvas.width - size * 2 - size * 2) + size * 2;
+        let y =
+          Math.random() * (canvas.height - size * 2 - size * 2) + size * 2;
         let directionX = Math.random() * 5 - 2.5;
         let directionY = Math.random() * 5 - 2.5;
         let color = "black";

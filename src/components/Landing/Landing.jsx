@@ -85,16 +85,6 @@ const Landing = () => {
         </div>
       </header>
 
-      {/* <Link href="#">
-        <a >
-          <button 
-            className={classes.contact_button} 
-            >
-            <FontAwesomeIcon icon={faEnvelope} />
-          </button>
-        </a>
-      </Link> */}
-
       <Link href="#projects">
         <a className={classes.scroll}>
           <div className={classes.scroll_icon}></div>
