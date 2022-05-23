@@ -107,15 +107,15 @@ const Canvas = () => {
     //Create particle array
     function init() {
       particleArray = [];
-      let numberOfParticles = (canvas.height * canvas.width) / 24000;
+      let numberOfParticles = (canvas.height * canvas.width) / 12000;
 
       for (let i = 0; i < numberOfParticles; i++) {
         let size = Math.random() * 5 + 1;
         let x = Math.random() * (canvas.width - size * 2 - size * 2) + size * 2;
         let y =
           Math.random() * (canvas.height - size * 2 - size * 2) + size * 2;
-        let directionX = Math.random() * 5 - 2.5;
-        let directionY = Math.random() * 5 - 2.5;
+        let directionX = Math.random() * 2;
+        let directionY = Math.random() * 2;
         let color = "black";
 
         particleArray.push(

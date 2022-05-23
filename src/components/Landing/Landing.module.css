@@ -1,6 +1,6 @@
 .landing_container {
   min-height: calc(100vh - 100px);
-  transition: all 900ms ease;
+  transition: all 900ms ease, opacity 1200ms ease-out;
 }
 
 .landing_content {
@@ -14,11 +14,17 @@
 .darkMode > header > div > p,
 .darkMode > header > div > .greeting {
   color: white;
+  background-color: rgba(36, 36, 36, 0.9);
 } 
 
 .darkMode > header > div > .landing_description {
   /* background-image: radial-gradient(ellipse farthest-corner at 12px 12px, rgba(36, 36, 36, 1) 0%, rgba(36, 36, 36, 0.8) ); */
   background-color: rgba(36, 36, 36, 0.9);
+} 
+
+.darkMode > header > div > .socials_list {
+  /* background-image: radial-gradient(ellipse farthest-corner at 12px 12px, rgba(36, 36, 36, 1) 0%, rgba(36, 36, 36, 0.8) ); */
+  /* background-color: rgba(36, 36, 36, 0.9); */
 } 
 
 .darkMode > .scroll > .scroll_icon {
@@ -62,6 +68,8 @@
   text-align: left;
   line-height: 1;
   width: fit-content;
+  transition: all 300ms ease;
+  background-color: rgba(245, 245, 245, 0.9);
   /* background-color: rgb(245, 245, 245); */
 }
 
@@ -92,6 +100,9 @@
 .socials_list {
   margin-top: 16px;
   display: flex;
+  /* background-color: rgba(245, 245, 245, 0.9); */
+  width: fit-content;
+  transition: all 300ms ease;
 }
 
 .social_link {
@@ -106,12 +117,12 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.3);
   transition: all 400ms ease;
 }
 
 .social_link:hover {
-  box-shadow: 0 6px 10px 0 rgb(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.25);
   transform: scale(1.1);
   filter: brightness(0.85);
 }
