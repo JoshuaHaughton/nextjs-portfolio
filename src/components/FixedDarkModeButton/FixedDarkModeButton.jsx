@@ -1,17 +1,18 @@
 import React from 'react';
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faAdjust, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import classes from "./FixedDarkModeButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classes from "./ContactButton.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { modalActions } from "../../store/modal";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import Link from "next/link";
+import { darkModeActions } from "../../store/darkMode";
 
-const ContactButton = () => {
+const FixedDarkModeButton = () => {
   const showModal = useSelector((state) => state.modal.showModal);
   const darkMode = useSelector((state) => state.darkMode.showDarkMode);
   
-  const isBreakpoint820 = useMediaQuery(820)
+  // const isBreakpoint820 = useMediaQuery(820)
   const dispatch = useDispatch()
   
   
@@ -23,29 +24,13 @@ const ContactButton = () => {
 
 
   return (
-
-    <>
-
-    {!isBreakpoint820 ? 
-      
       <button
       className={buttonClasses}
-      onClick={() => dispatch(modalActions.toggleModal())}
+      onClick={() => dispatch(darkModeActions.toggleDarkMode())}
       >
-        <FontAwesomeIcon icon={faEnvelope} />
+        <FontAwesomeIcon icon={faAdjust} />
       </button>
-    :
-    <Link href={"#"}>
-      <button
-        className={buttonClasses}
-        onClick={() => dispatch(modalActions.toggleModal())}
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-        </button>
-    </Link>
-  }
-  </>
   );
 };
 
-export default React.memo(ContactButton);
+export default React.memo(FixedDarkModeButton);

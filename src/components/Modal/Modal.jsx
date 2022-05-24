@@ -10,6 +10,10 @@ import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import modal, { modalActions } from "../../store/modal";
 import emailjs from '@emailjs/browser';
+import Link from "next/link";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import LinkedinLogo from "../../../public/linkedin-logo.svg";
+import GithubLogo from "../../../public/github-logo.svg";
 
 export default function Modal() {
   const [loading, setLoading] = useState(false)
@@ -105,7 +109,49 @@ export default function Modal() {
       <div className={modalClasses}>
         <div className={aboutHalfClasses}>
           <h3 className={classes.title}>Here's a bit about me:</h3>
-          <h4 className={classes.subtitle}>Fullstack Software Engineer</h4>
+          <h4 className={classes.subtitle}>Fullstack Software Engineer
+          <span className={classes.social_list}>
+
+
+            <Link href={"/JoshuaHaughtonResume.pdf"}>
+              <a className={classes.social_link} target="_blank">
+                <FontAwesomeIcon icon={faFilePdf} />
+              </a>
+            </Link>
+         
+            <Link href="https://www.linkedin.com/in/joshua-haughton-5ba15a22b/">
+              <a className={classes.social_link} target="_blank">
+                <Image
+                  src={LinkedinLogo}
+                  height={24}
+                  width={24}
+                  className={classes.social_logo}
+                  priority={true}
+                  quality={100}
+                />
+              </a>
+            </Link>
+
+            <Link href="https://github.com/JoshuaHaughton">
+              <a className={classes.social_link} target="_blank">
+                <Image
+                  src={GithubLogo}
+                  height={24}
+                  width={24}
+                  className={classes.social_logo}
+                  priority={true}
+                  quality={100}
+                />
+              </a>
+            </Link>
+
+       
+
+
+
+          </span>
+          
+          </h4>
           <p className={classes.paragraph}>
             I'm a 21 year-old
             <span className={`${classes.secondary} ${classes.bold}`}>
@@ -116,11 +162,12 @@ export default function Modal() {
             {" "}user experience.
             </span>
             <br />
+            {/* Getting a taste of software development through multiple frontend internships has left me with a
+powerful passion to innovate, create, and improve. */}
+            {/* I currently work as a freelance digital marketer, but I spend every
+            chance I get upgrading my coding skills. */}
             <br />
-            I currently work as a freelance digital marketer, but I spend every
-            chance I get upgrading my coding skills.
-            <br />
-            The
+            As a former digital marketer, the
             <span className={`${classes.secondary} ${classes.bold}`}>
             {" "}copywriting, user-based design,{" "}
             </span>
@@ -128,11 +175,12 @@ export default function Modal() {
             <span className={`${classes.secondary} ${classes.bold}`}>
             {" "}customer psychology skills
             </span>{" "}
-            I've acquired through marketing for E-Commerce brands have been
+            I've acquired through marketing for small-mid sized businesses have been
             essential in allowing me to quickly learn how to craft interfaces
             that are extremely visually appealing to users.
           </p>
 
+            <br />
           <div className={classes.languages}>
             <div className={classes.language}>
               <figure >
@@ -143,6 +191,7 @@ export default function Modal() {
                   className={classes.language_img}
                   priority={true}
                   quality={100}
+                  objectFit={'contain'}
                 />
               </figure>
                 <span className={classes.language_name}>HTML</span>

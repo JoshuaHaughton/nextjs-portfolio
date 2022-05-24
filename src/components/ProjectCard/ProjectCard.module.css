@@ -6,7 +6,7 @@
 }
 
 .project:last-child {
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }
 
 .description {
@@ -28,6 +28,7 @@
   overflow: hidden;
   display: flex;
   transition: all 450ms ease;
+  /* border: 2px solid transparent; */
 }
 
 .darkMode > .project_wrapper {

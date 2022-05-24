@@ -162,6 +162,7 @@ const Canvas = () => {
     animate();
 
     return () => {
+      // console.log('again');
       window.removeEventListener("mousemove", mouseMoveEventHandler);
       window.removeEventListener("mouseout", mouseOutEventHandler);
       window.removeEventListener("resize", resizeEventHandler);

@@ -11,40 +11,34 @@
   opacity: 0;
 }
 
-.darkMode > header > div > p,
-.darkMode > header > div > .greeting {
+.darkMode > header > div > div > p,
+.darkMode > header > div > div > .greeting {
   color: white;
   background-color: rgba(36, 36, 36, 0.9);
 } 
 
-.darkMode > header > div > .landing_description {
-  /* background-image: radial-gradient(ellipse farthest-corner at 12px 12px, rgba(36, 36, 36, 1) 0%, rgba(36, 36, 36, 0.8) ); */
+.darkMode > header > div > div > .landing_description {
   background-color: rgba(36, 36, 36, 0.9);
-} 
+}
 
-.darkMode > header > div > .socials_list {
-  /* background-image: radial-gradient(ellipse farthest-corner at 12px 12px, rgba(36, 36, 36, 1) 0%, rgba(36, 36, 36, 0.8) ); */
-  /* background-color: rgba(36, 36, 36, 0.9); */
-} 
-
-.darkMode > .scroll > .scroll_icon {
+.darkMode > div > .scroll > .scroll_icon {
   border: 2px solid #fff;
 }
 
-.darkMode > .scroll > .scroll_icon:after {
+.darkMode > div > .scroll > .scroll_icon:after {
   background-color: #fff;
 }
 
-.darkMode > .scroll > .scroll_icon:hover {
+.darkMode > div > .scroll > .scroll_icon:hover {
   transform: scale(1.1);
   background-color: #fff;
 }
 
-.darkMode > .scroll > .scroll_icon:hover:after {
+.darkMode > div > .scroll > .scroll_icon:hover:after {
   background-color: #242424;
 }
 
-.darkMode > .scroll > .scroll_icon:active {
+.darkMode > div > .scroll > .scroll_icon:active {
   transform: scale(0.9);
 }
 
@@ -109,8 +103,8 @@
   background-color: #1f59ed;
   color: white;
   padding: 6px;
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   font-size: 14px;
   margin-right: 12px;
   display: flex;
@@ -133,6 +127,10 @@
 
 .social_link > span > img {
   filter: invert(100%);
+}
+
+.social_link > svg {
+  height: 23px;
 }
 
 .social_logo {
@@ -247,6 +245,7 @@
   }
   .greeting {
     text-align: center;
+    margin: 0 auto;
   }
   
   .landing_description {
@@ -255,5 +254,6 @@
 
   .socials_list {
     justify-content: center;
+    margin: 0 auto;
   }
 }

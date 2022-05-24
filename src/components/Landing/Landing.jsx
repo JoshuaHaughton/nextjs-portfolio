@@ -9,6 +9,8 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { modalActions } from "../../store/modal";
 import LandingCanvas from "../Canvas/LandingCanvas";
+import FadeIn from "react-fade-in";
+import { motion } from "framer-motion";
 
 const Landing = () => {
   const showModal = useSelector((state) => state.modal.showModal);
@@ -24,72 +26,130 @@ const Landing = () => {
 
   return (
     <div className={containerClasses}>
-      <LandingCanvas />
-      <header className={classes.landing}>
-        <div className={classes.landing_content}>
-          <h1 className={classes.greeting}>Hey,</h1>
-          <h1 className={`${classes.greeting} ${classes.secondary}`}>
-            {" "}
-            I'm Josh.
-          </h1>
-          {/* <h1 className={classes.greeting}>Hey, <br/> <span className={classes.secondary}>I'm Josh.</span></h1> */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { scale: 0.8, opacity: 0 },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+              timeConstant: 1200
+            },
+          },
+        }}
+      >
+        <LandingCanvas />
 
-          <p className={classes.landing_description}>
-            I'm a digital marketer looking to transition my passion for frontend
-            development and user experience into a career as a
-            <b className={classes.secondary}> Frontend Software Engineer.</b>
-            <br />
-            Here's a bit more
-            <b
-              className={`${classes.description_hover} ${classes.secondary}`}
-              onClick={() => dispatch(modalActions.toggleModal())}
-            >
+      </motion.div>
+      
+        <header className={classes.landing}>
+        <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { scale: 0.8, opacity: 0 },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.1,
+            },
+          },
+        }}
+      >
+          <div className={classes.landing_content}>
+            <h1 className={classes.greeting}>Hey,</h1>
+            <h1 className={`${classes.greeting} ${classes.secondary}`}>
               {" "}
-              about me:
-            </b>
-            {/* <b className="secondary header__description--hover" onclick="toggleModal()">about me:</b> */}
-          </p>
-          <div className={classes.socials_list}>
-            <Link href="https://www.linkedin.com/in/joshua-haughton-5ba15a22b/">
-              <a className={classes.social_link} target="_blank">
-                <Image
-                  src={LinkedinLogo}
-                  height={17}
-                  width={17}
-                  className={classes.social_logo}
-                  priority={true}
-                  quality={100}
-                />
-              </a>
-            </Link>
+              I'm Josh.
+            </h1>
+            {/* <h1 className={classes.greeting}>Hey, <br/> <span className={classes.secondary}>I'm Josh.</span></h1> */}
 
-            <Link href="https://github.com/JoshuaHaughton">
-              <a className={classes.social_link} target="_blank">
-                <Image
-                  src={GithubLogo}
-                  height={18}
-                  width={18}
-                  className={classes.social_logo}
-                  priority={true}
-                  quality={100}
-                />
-              </a>
-            </Link>
+            <p className={classes.landing_description}>
+              {/* I love to build  */}
+              I'm a fullstack developer with a passion for creating apps and
+              enhancing user experiences through
+              {/* beautiful  */}
+              <br />
+              {/* looking to transition my passion for frontend
+              development and user experience into a career as a */}
+              <b className={classes.secondary}>
+                {" "}
+                Frontend Javascript Frameworks like React.
+              </b>
+              <br />
+              Here's a bit more
+              <b
+                className={`${classes.description_hover} ${classes.secondary}`}
+                onClick={() => dispatch(modalActions.toggleModal())}
+              >
+                {" "}
+                about me:
+              </b>
+              {/* <b className="secondary header__description--hover" onclick="toggleModal()">about me:</b> */}
+            </p>
+            <div className={classes.socials_list}>
+              <Link href="https://www.linkedin.com/in/joshua-haughton-5ba15a22b/">
+                <a className={classes.social_link} target="_blank">
+                  <Image
+                    src={LinkedinLogo}
+                    height={24}
+                    width={24}
+                    className={classes.social_logo}
+                    priority={true}
+                    quality={100}
+                  />
+                </a>
+              </Link>
 
-            <Link href={"/JoshuaHaughtonResume.pdf"}>
-              <a className={classes.social_link} target="_blank">
-                <FontAwesomeIcon icon={faFilePdf} />
-              </a>
-            </Link>
+              <Link href="https://github.com/JoshuaHaughton">
+                <a className={classes.social_link} target="_blank">
+                  <Image
+                    src={GithubLogo}
+                    height={24}
+                    width={24}
+                    className={classes.social_logo}
+                    priority={true}
+                    quality={100}
+                  />
+                </a>
+              </Link>
+
+              <Link href={"/JoshuaHaughtonResume.pdf"}>
+                <a className={classes.social_link} target="_blank">
+                  <FontAwesomeIcon icon={faFilePdf} />
+                </a>
+              </Link>
+            </div>
           </div>
-        </div>
-      </header>
+      </motion.div>
+        </header>
 
-      <Link href="#projects">
-        <a className={classes.scroll}>
-          <div className={classes.scroll_icon}></div>
-        </a>
-      </Link>
+        <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { scale: 0.8, opacity: 0 },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.1,
+            },
+          },
+        }}
+      >
+          <Link href="#projects">
+            <a className={classes.scroll}>
+              <div className={classes.scroll_icon}></div>
+            </a>
+          </Link>
+
+      </motion.div>
+
     </div>
   );
 };

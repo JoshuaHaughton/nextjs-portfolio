@@ -18,6 +18,10 @@
   color: white;
 }
 
+.darkMode > ul > .button > a > svg {
+  color: #ecb90f;
+}
+
 .darkMode > figure {
   filter: invert(1);
 }
@@ -51,6 +55,10 @@
   list-style-type: none;
 }
 
+.button > a > svg {
+  color: #1f59ed;
+}
+
 .link_anchor {
   text-decoration: none;
   font-size: 16px;
@@ -58,6 +66,7 @@
   font-weight: 700;
   cursor: pointer;
 }
+
 
 .link_hover {
   position: relative;
