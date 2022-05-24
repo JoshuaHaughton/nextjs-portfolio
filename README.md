@@ -2,7 +2,7 @@
 
 My NextJs personal E-portfolio built to showcase my projects, as well as increase my online presence.
 
-View Live HERE: [My Portfolio](https://joshuahaughton.github.io/)
+View Live HERE: [My Portfolio](https://nextjs-portfolio-three-phi.vercel.app/)
 
 
 
