@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./ContactButton.module.css";
@@ -10,42 +10,37 @@ import Link from "next/link";
 const ContactButton = () => {
   const showModal = useSelector((state) => state.modal.showModal);
   const darkMode = useSelector((state) => state.darkMode.showDarkMode);
-  
-  const isBreakpoint820 = useMediaQuery(820)
-  const dispatch = useDispatch()
-  
-  
-  
-  let buttonClasses = classes.contact_button
-  
-  showModal && (buttonClasses = `${classes.contact_button} ${classes.showModal}`)
-  darkMode && (buttonClasses = `${buttonClasses} ${classes.darkMode}`)
 
+  const isBreakpoint820 = useMediaQuery(820);
+  const dispatch = useDispatch();
+
+  let buttonClasses = classes.contact_button;
+
+  showModal &&
+    (buttonClasses = `${classes.contact_button} ${classes.showModal}`);
+  darkMode && (buttonClasses = `${buttonClasses} ${classes.darkMode}`);
 
   return (
-
     <>
-
-    {!isBreakpoint820 ? 
-      
-      <button
-      className={buttonClasses}
-      onClick={() => dispatch(modalActions.toggleModal())}
-      >
-        <FontAwesomeIcon icon={faEnvelope} />
-      </button>
-    :
-    <Link href={"#"}>
-      <button
-        className={buttonClasses}
-        onClick={() => dispatch(modalActions.toggleModal())}
+      {!isBreakpoint820 ? (
+        <button
+          className={buttonClasses}
+          onClick={() => dispatch(modalActions.toggleModal())}
         >
           <FontAwesomeIcon icon={faEnvelope} />
         </button>
-    </Link>
-  }
-  </>
+      ) : (
+        <Link href={"#"}>
+          <button
+            className={buttonClasses}
+            onClick={() => dispatch(modalActions.toggleModal())}
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+          </button>
+        </Link>
+      )}
+    </>
   );
 };
 
-export default React.memo(ContactButton);
+export default ContactButton;

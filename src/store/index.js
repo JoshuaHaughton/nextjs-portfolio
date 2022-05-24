@@ -4,8 +4,7 @@ import darkModeReducer from "./darkMode";
 
 //Redux store that hosts all 3 reducer slices
 const store = configureStore({
-  reducer: {modal: modalReducer, darkMode: darkModeReducer}
+  reducer: { modal: modalReducer, darkMode: darkModeReducer },
 });
-
 
 export default store;

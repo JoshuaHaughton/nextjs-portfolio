@@ -15,7 +15,7 @@
 .darkMode > header > div > div > .greeting {
   color: white;
   background-color: rgba(36, 36, 36, 0.9);
-} 
+}
 
 .darkMode > header > div > div > .landing_description {
   background-color: rgba(36, 36, 36, 0.9);
@@ -41,7 +41,6 @@
 .darkMode > div > .scroll > .scroll_icon:active {
   transform: scale(0.9);
 }
-
 
 .landing {
   position: absolute;
@@ -195,17 +194,11 @@
   color: #1f59ed !important;
 }
 
-
-
 @media (max-width: 1135px) {
-
   .landing {
     padding: 0 48px;
   }
-
 }
-
-
 
 @media (max-width: 768px) {
   .greeting {
@@ -217,18 +210,17 @@
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .landing_container {
     min-height: 90vh;
   }
 }
 
-
 @media (max-width: 450px) {
   .greeting {
     font-size: 52px;
   }
-  
+
   .landing_description {
     font-size: 16px;
   }
@@ -239,7 +231,6 @@
 }
 
 @media (max-width: 320px) {
-
   .landing_content {
     text-align: center;
   }
@@ -247,7 +238,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  
+
   .landing_description {
     text-align: center;
   }

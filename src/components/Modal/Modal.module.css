@@ -2,7 +2,7 @@
 .input:-webkit-autofill:hover,
 .input:-webkit-autofill:focus,
 .input:-webkit-autofill:active {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .input:-internal-autofill-selected {
@@ -78,7 +78,9 @@
   background-color: #242424;
 }
 
-.darkModeAbout > h3, .darkModeAbout > h4, .darkModeAbout > p {
+.darkModeAbout > h3,
+.darkModeAbout > h4,
+.darkModeAbout > p {
   color: white;
 }
 
@@ -90,7 +92,9 @@
   transform: translateX(0%);
 }
 
-.modal_about > .title, .modal_about >  .subtitle, .modal_about >  .paragraph {
+.modal_about > .title,
+.modal_about > .subtitle,
+.modal_about > .paragraph {
   margin-left: 16px;
 }
 
@@ -222,13 +226,6 @@
   width: 100%;
 }
 
-
-
-
-
-
-
-
 .modal_contact {
   background-color: #242424;
   color: white;
@@ -252,7 +249,9 @@
   color: #ba181b;
 }
 
-.darkModeContact > h3, .darkModeContact > h4, .darkModeContact > form > div > label {
+.darkModeContact > h3,
+.darkModeContact > h4,
+.darkModeContact > form > div > label {
   color: black;
 }
 
@@ -263,21 +262,21 @@
 .darkModeContact > form > div > .input {
   border-radius: 8px;
   border: 3px solid #929292;
-
 }
 
-.darkModeContact > form > div > .input, .darkModeContact > form > div > .textarea {
+.darkModeContact > form > div > .input,
+.darkModeContact > form > div > .textarea {
   background-color: #242424;
   color: #fff;
   font-weight: 600;
 }
 
-.darkModeContact > form > div > .input:hover, .darkModeContact > form > div > .textarea:hover {
+.darkModeContact > form > div > .input:hover,
+.darkModeContact > form > div > .textarea:hover {
   background-color: #fff;
   color: #242424;
   border: 3px solid #929292;
 }
-
 
 .darkModeContact > form > div > .textarea:hover {
   border: 3px solid #1f59ed;
@@ -291,8 +290,6 @@
   border: 2px solid #242424;
   color: black;
 }
-
-
 
 .modal_contact_open {
   transform: translateX(0%);
@@ -438,10 +435,6 @@
   }
 }
 
-
-
-
-
 .secondary {
   color: #1f59ed;
   /* color: #0066ff; */
@@ -474,7 +467,9 @@
     border-radius: 0;
   }
 
-  .modal_about > .title, .modal_about > .subtitle, .modal_about > .paragraph {
+  .modal_about > .title,
+  .modal_about > .subtitle,
+  .modal_about > .paragraph {
     padding: 0 14px;
   }
 
@@ -503,13 +498,13 @@
   }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
   .language {
     width: 25%;
   }
 }
 
-@media(max-width: 350px) {
+@media (max-width: 350px) {
   .language {
     display: none;
   }

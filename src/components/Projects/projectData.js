@@ -16,9 +16,8 @@ const projects = [
     githubLink: "https://github.com/JoshuaHaughton/vinyl-shop",
     demoLink: "https://vinyl-fresh.netlify.app/",
     primary: "0652b4",
-    secondary: "8e8d8d"
+    secondary: "8e8d8d",
   },
-
 
   {
     title: "Watchlist",
@@ -32,9 +31,8 @@ const projects = [
     githubLink: "https://github.com/JoshuaHaughton/watchlist",
     demoLink: "https://watchlist-client.netlify.app/",
     primary: "ba181b",
-    secondary: "c78f03"
+    secondary: "c78f03",
   },
-
 
   {
     title: "LinkedIn Remake",
@@ -47,10 +45,9 @@ const projects = [
     githubLink: "https://github.com/JoshuaHaughton/linkedin",
     demoLink: "https://jh-linkedin-clone.netlify.app/",
     primary: "0177b7",
-    secondary: "8e8d8d"
+    secondary: "8e8d8d",
     // secondary: "868686"
   },
-
 
   {
     title: "Crypto Tracker",
@@ -60,7 +57,7 @@ const projects = [
     githubLink: "https://github.com/JoshuaHaughton/crypto-tracker",
     demoLink: "https://jh-crypto-tracker.vercel.app/",
     primary: "ff9500",
-    secondary: "8e8d8d"
+    secondary: "8e8d8d",
   },
 
   {
@@ -74,7 +71,7 @@ const projects = [
     githubLink: "https://github.com/JoshuaHaughton/airbnb",
     demoLink: "https://landbnb-xi.vercel.app/",
     primary: "F87171",
-    secondary: "8e8d8d"
+    secondary: "8e8d8d",
   },
 ];
 

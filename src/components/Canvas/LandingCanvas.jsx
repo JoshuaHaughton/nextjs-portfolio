@@ -7,6 +7,7 @@ const Canvas = () => {
 
   const darkMode = useSelector((state) => state.darkMode.showDarkMode);
 
+  //useEffect gives access to window property on client
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -162,7 +163,6 @@ const Canvas = () => {
     animate();
 
     return () => {
-      // console.log('again');
       window.removeEventListener("mousemove", mouseMoveEventHandler);
       window.removeEventListener("mouseout", mouseOutEventHandler);
       window.removeEventListener("resize", resizeEventHandler);

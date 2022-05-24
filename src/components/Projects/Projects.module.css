@@ -7,8 +7,6 @@
 .showModal {
   opacity: 0;
   transition: all 900ms ease;
-  /* display: none; */
-  /* height: 0px; */
 }
 
 .darkMode > div > h1 {
@@ -35,17 +33,13 @@
   transition: all 300ms ease;
 }
 
-@media(max-width: 875px) {
-  /* .showModal > .row {
-    max-height: 1px;
-    overflow: hidden;
-  } */
+@media (max-width: 875px) {
 
   .showModal {
     animation: slideout 0.5s forwards;
     height: 0px;
   }
-  
+
   @keyframes slideout {
     from {
       height: var(--h);
@@ -53,16 +47,11 @@
       opacity: 1;
     }
     to {
-      height:0; /*This will change for each element */
+      height: 0; /*This will change for each element */
       transform: scale(0);
       opacity: 0;
     }
   }
-
-  /* .container {
-    padding: 8px 0;
-  } */
-  
 }
 
 @media (max-width: 600px) {

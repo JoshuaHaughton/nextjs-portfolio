@@ -8,18 +8,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../../store/modal";
 
 const Footer = () => {
-
-
   const showModal = useSelector((state) => state.modal.showModal);
   const darkMode = useSelector((state) => state.darkMode.showDarkMode);
 
-  const dispatch = useDispatch()
-  
-  let footerClasses = classes.footer
-  
-  showModal && (footerClasses = `${classes.footer} ${classes.showModal}`)
-  darkMode && (footerClasses = `${footerClasses} ${classes.darkMode}`)
-  
+  const dispatch = useDispatch();
+
+  let footerClasses = classes.footer;
+
+  showModal && (footerClasses = `${classes.footer} ${classes.showModal}`);
+  darkMode && (footerClasses = `${footerClasses} ${classes.darkMode}`);
+
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
@@ -45,29 +43,23 @@ const Footer = () => {
 
           <div className={classes.social_list}>
             <Link href="https://github.com/JoshuaHaughton">
-              <a
-                target="_blank"
-                className={classes.social_link}
-              >
+              <a target="_blank" className={classes.social_link}>
                 Github
               </a>
             </Link>
 
             <Link href="https://www.linkedin.com/in/joshua-haughton-5ba15a22b/">
-              <a
-                target="_blank"
-                className={classes.social_link}
-              >
+              <a target="_blank" className={classes.social_link}>
                 LinkedIn
               </a>
             </Link>
 
-              <a
-                onClick={() => dispatch(modalActions.toggleModal())}
-                className={classes.social_link}
-              >
-                Contact
-              </a>
+            <a
+              onClick={() => dispatch(modalActions.toggleModal())}
+              className={classes.social_link}
+            >
+              Contact
+            </a>
 
             <Link href={"/JoshuaHaughtonResume.pdf"}>
               <a

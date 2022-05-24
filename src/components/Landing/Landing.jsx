@@ -9,7 +9,6 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { modalActions } from "../../store/modal";
 import LandingCanvas from "../Canvas/LandingCanvas";
-import FadeIn from "react-fade-in";
 import { motion } from "framer-motion";
 
 const Landing = () => {
@@ -36,30 +35,29 @@ const Landing = () => {
             opacity: 1,
             transition: {
               delay: 0.4,
-              timeConstant: 1200
+              timeConstant: 1200,
             },
           },
         }}
       >
         <LandingCanvas />
-
       </motion.div>
-      
-        <header className={classes.landing}>
+
+      <header className={classes.landing}>
         <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { scale: 0.8, opacity: 0 },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.1,
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { scale: 0.8, opacity: 0 },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: 0.1,
+              },
             },
-          },
-        }}
-      >
+          }}
+        >
           <div className={classes.landing_content}>
             <h1 className={classes.greeting}>Hey,</h1>
             <h1 className={`${classes.greeting} ${classes.secondary}`}>
@@ -125,10 +123,10 @@ const Landing = () => {
               </Link>
             </div>
           </div>
-      </motion.div>
-        </header>
+        </motion.div>
+      </header>
 
-        <motion.div
+      <motion.div
         initial="hidden"
         animate="visible"
         variants={{
@@ -142,14 +140,12 @@ const Landing = () => {
           },
         }}
       >
-          <Link href="#projects">
-            <a className={classes.scroll}>
-              <div className={classes.scroll_icon}></div>
-            </a>
-          </Link>
-
+        <Link href="#projects">
+          <a className={classes.scroll}>
+            <div className={classes.scroll_icon}></div>
+          </a>
+        </Link>
       </motion.div>
-
     </div>
   );
 };

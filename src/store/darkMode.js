@@ -11,9 +11,6 @@ const darkModeSlice = createSlice({
     toggleDarkMode(state) {
       state.showDarkMode = !state.showDarkMode
     }
-    // closeDarkMode(state) {
-    //   state.showDarkMode = false
-    // }
   },
 });
 

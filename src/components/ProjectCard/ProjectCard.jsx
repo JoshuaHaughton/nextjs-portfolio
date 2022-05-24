@@ -1,11 +1,8 @@
 import classes from "./ProjectCard.module.css";
-// import projectPhoto from "../../../public/Ecom-Project.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import GithubLogo from "../../../public/github-logo.png";
-// import GithubLogo from "../../../public/github-logo.svg";
 
 const ProjectCard = ({
   darkMode,
@@ -14,15 +11,13 @@ const ProjectCard = ({
   description,
   projectImage,
   githubLink,
-  demoLink, 
-  primary, 
-  secondary
+  demoLink,
+  primary,
+  secondary,
 }) => {
+  let projectClasses = classes.project;
 
-  let projectClasses = classes.project
-
-  darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`)
-
+  darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`);
 
   return (
     <li className={projectClasses}>
@@ -63,7 +58,7 @@ const ProjectCard = ({
           color: #${primary};
         }
         h4 {
-          color: #${secondary}
+          color: #${secondary};
         }
         a:hover {
           color: #${primary};
