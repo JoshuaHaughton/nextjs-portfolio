@@ -1,3 +1,57 @@
+# My NextJs E-portfolio
+
+My NextJs personal E-portfolio built to showcase my projects, as well as increase my online presence.
+
+View Live HERE: [My Portfolio](https://joshuahaughton.github.io/)
+
+
+
+## Built With:
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Redux
+- NextJs
+
+
+
+
+## Images
+
+
+
+
+### Landing
+!['Landing page of website'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Landing.png)
+
+
+
+
+### Modal
+!['Contact Modal'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Modal.png)
+
+
+
+
+### Dark Mode
+!['Landing Page with Dark Mode Activated'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/DarkMode.png)
+
+
+
+
+### Projects
+!['Projects'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Projects.png)
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
