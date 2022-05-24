@@ -6,7 +6,7 @@
 }
 
 .project:last-child {
-  margin-bottom: 160px;
+  margin-bottom: 32px;
 }
 
 .description {
@@ -25,9 +25,11 @@
   z-index: 10;
   border-radius: 20px;
   box-shadow: 0 20px 56px 0 rgb(0, 0, 0, 0.45);
+  /* filter: drop-shadow(0 20px 56px rgba(0, 0, 0, 0.45)); */
   overflow: hidden;
   display: flex;
   transition: all 450ms ease;
+  /* border: 2px solid #fff; */
   /* border: 2px solid transparent; */
 }
 

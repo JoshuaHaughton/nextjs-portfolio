@@ -23,8 +23,8 @@ const ProjectCard = ({
   darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`);
 
   const cardVariants = {
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0.1 },
+    visible: { opacity: 1, transition: { duration: 0.35 } },
+    hidden: { opacity: 0.25 },
   };
 
   const controls = useAnimation();

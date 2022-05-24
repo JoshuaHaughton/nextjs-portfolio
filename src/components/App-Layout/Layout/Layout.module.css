@@ -11,6 +11,10 @@
   background-color: #242424;
 }
 
+.main {
+  margin-bottom: 64px;
+}
+
 @media(max-width: 820px) {
   .showModal, .showModal > main {
     height: fit-content;
