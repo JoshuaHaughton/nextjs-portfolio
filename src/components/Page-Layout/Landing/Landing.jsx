@@ -68,16 +68,20 @@ const Landing = () => {
 
             <p className={classes.landing_description}>
               {/* I love to build  */}
-              I'm a fullstack developer with a passion for creating apps and
-              enhancing user experiences through
+              I'm a fullstack developer with a passion for <b className={classes.secondary}>creating apps</b> and
+              <b className={classes.secondary}> enhancing user experiences</b> through <br/>frontend technology like
               {/* beautiful  */}
-              <br />
-              {/* looking to transition my passion for frontend
-              development and user experience into a career as a */}
               <b className={classes.secondary}>
                 {" "}
-                Frontend Javascript Frameworks like React.
+                 React
+              </b> and
+              <b className={classes.secondary}>
+                {" "}
+                 Next.js.
               </b>
+              {/* <br /> */}
+              {/* looking to transition my passion for frontend
+              development and user experience into a career as a */}
               <br />
               Here's a bit more
               <b
