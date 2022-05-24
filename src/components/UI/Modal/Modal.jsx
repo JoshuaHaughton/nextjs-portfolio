@@ -113,7 +113,7 @@ export default function Modal() {
                     height={24}
                     width={24}
                     className={classes.social_logo}
-                    priority={true}
+                    // priority={true}
                     quality={100}
                     alt="Linkedin Logo"
                   />
@@ -127,7 +127,7 @@ export default function Modal() {
                     height={24}
                     width={24}
                     className={classes.social_logo}
-                    priority={true}
+                    // priority={true}
                     quality={100}
                     alt="Github Logo"
                   />
@@ -176,7 +176,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                   alt="Html Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                   objectFit={"contain"}
                 />
@@ -191,7 +191,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
                   alt="CSS Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -206,7 +206,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
                   alt="JavaScript Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -220,7 +220,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
                   alt="React Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -234,7 +234,7 @@ powerful passion to innovate, create, and improve. */}
                   src={nextjsIcon}
                   alt="Next.Js Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -249,7 +249,7 @@ powerful passion to innovate, create, and improve. */}
                   src={typescriptIcon}
                   alt="Typescript Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -264,7 +264,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png"
                   alt="Node Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                   objectFit={"contain"}
                 />
@@ -279,7 +279,7 @@ powerful passion to innovate, create, and improve. */}
                   src={mongoDBIcon}
                   alt="MongoDB Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -294,7 +294,7 @@ powerful passion to innovate, create, and improve. */}
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
                   alt="PostgreSQL Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>
@@ -308,7 +308,7 @@ powerful passion to innovate, create, and improve. */}
                   src={firebaseIcon}
                   alt="Firebase Logo"
                   className={classes.language_img}
-                  priority={true}
+                  // priority={true}
                   quality={100}
                 />
               </figure>

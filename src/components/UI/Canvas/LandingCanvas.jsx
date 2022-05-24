@@ -14,6 +14,8 @@ const Canvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight - 100;
     let particleArray = [];
+    // const clientHeight = document.getElementById('projects').clientHeight;
+    // canvas.height = clientHeight
 
     //handle mouse
     const mouse = {

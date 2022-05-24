@@ -53,7 +53,7 @@ const Landing = () => {
               scale: 1,
               opacity: 1,
               transition: {
-                delay: 0.6,
+                delay: 1,
                 timeConstant: 1200,
               },
             },
