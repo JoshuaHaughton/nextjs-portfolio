@@ -40,6 +40,7 @@ const ProjectCard = ({
               href={githubLink}
               target="_blank"
               className={classes.description_link}
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} />
             </a>
@@ -47,6 +48,7 @@ const ProjectCard = ({
               href={demoLink}
               target="_blank"
               className={classes.description_link}
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faLink} />
             </a>

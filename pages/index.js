@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className={classes.container}>
       <Head>
-        <title>Josh Haughton's Portolio</title>
+        <title>Josh Haughton&apos;s Portolio</title>
         <meta name="description" content="Josh Haughton Portfolio Site" />
         <link rel="icon" href="/logo.svg" />
       </Head>

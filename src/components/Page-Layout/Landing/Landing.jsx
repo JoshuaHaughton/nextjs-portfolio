@@ -62,13 +62,13 @@ const Landing = () => {
             <h1 className={classes.greeting}>Hey,</h1>
             <h1 className={`${classes.greeting} ${classes.secondary}`}>
               {" "}
-              I'm Josh.
+              I&apos;m Josh.
             </h1>
             {/* <h1 className={classes.greeting}>Hey, <br/> <span className={classes.secondary}>I'm Josh.</span></h1> */}
 
             <p className={classes.landing_description}>
               {/* I love to build  */}
-              I'm a fullstack developer with a passion for <b className={classes.secondary}>creating apps</b> and
+              I&apos;m a fullstack developer with a passion for <b className={classes.secondary}>creating apps</b> and
               <b className={classes.secondary}> enhancing user experiences</b> through <br/>frontend technology like
               {/* beautiful  */}
               <b className={classes.secondary}>
@@ -83,7 +83,7 @@ const Landing = () => {
               {/* looking to transition my passion for frontend
               development and user experience into a career as a */}
               <br />
-              Here's a bit more
+              Here&apos;s a bit more
               <b
                 className={`${classes.description_hover} ${classes.secondary}`}
                 onClick={() => dispatch(modalActions.toggleModal())}
@@ -103,6 +103,7 @@ const Landing = () => {
                     className={classes.social_logo}
                     priority={true}
                     quality={100}
+                    alt="Linkedin Logo"
                   />
                 </a>
               </Link>
@@ -116,6 +117,7 @@ const Landing = () => {
                     className={classes.social_logo}
                     priority={true}
                     quality={100}
+                    alt="Github Logo"
                   />
                 </a>
               </Link>

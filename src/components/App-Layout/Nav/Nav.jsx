@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <nav className={navClasses}>
-      <Link href={"#"}>
+      <Link href={"#"} passHref>
         <figure>
           <Image
             className={classes.logo}

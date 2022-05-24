@@ -23,25 +23,25 @@ View Live HERE: [My Portfolio](https://joshuahaughton.github.io/)
 
 
 ### Landing
-!['Landing page of website'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Landing.png)
+!['Landing page of website'](https://github.com/JoshuaHaughton/nextjs-portfolio/blob/main/public/Landing.png)
 
 
 
 
 ### Modal
-!['Contact Modal'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Modal.png)
+!['Contact Modal'](https://github.com/JoshuaHaughton/nextjs-portfolio/blob/main/public/Modal.png)
 
 
 
 
 ### Dark Mode
-!['Landing Page with Dark Mode Activated'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/DarkMode.png)
+!['Landing Page with Dark Mode Activated'](https://github.com/JoshuaHaughton/nextjs-portfolio/blob/main/public/DarkMode.png)
 
 
 
 
 ### Projects
-!['Projects'](https://github.com/JoshuaHaughton/joshuahaughton.github.io/blob/main/public/Projects.png)
+!['Projects'](https://github.com/JoshuaHaughton/nextjs-portfolio/blob/main/public/Projects.png)
 
 
 

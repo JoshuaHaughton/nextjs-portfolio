@@ -96,7 +96,7 @@ export default function Modal() {
     <>
       <div className={modalClasses}>
         <div className={aboutHalfClasses}>
-          <h3 className={classes.title}>Here's a bit about me:</h3>
+          <h3 className={classes.title}>Here&apos;s a bit about me:</h3>
           <h4 className={classes.subtitle}>
             Fullstack Software Engineer
             <span className={classes.social_list}>
@@ -115,6 +115,7 @@ export default function Modal() {
                     className={classes.social_logo}
                     priority={true}
                     quality={100}
+                    alt="Linkedin Logo"
                   />
                 </a>
               </Link>
@@ -128,6 +129,7 @@ export default function Modal() {
                     className={classes.social_logo}
                     priority={true}
                     quality={100}
+                    alt="Github Logo"
                   />
                 </a>
               </Link>
@@ -160,7 +162,7 @@ powerful passion to innovate, create, and improve. */}
               {" "}
               customer psychology skills
             </span>{" "}
-            I've acquired through marketing for small-mid sized businesses have
+            I&apos;ve acquired through marketing for small-mid sized businesses have
             been essential in allowing me to quickly learn how to craft
             interfaces that are extremely visually appealing to users.
           </p>
@@ -321,7 +323,7 @@ powerful passion to innovate, create, and improve. */}
             className={classes.modal_exit}
             onClick={() => dispatch(modalActions.closeModal())}
           />
-          <h3 className={classes.title}>Let's have a chat!</h3>
+          <h3 className={classes.title}>Let&apos;s have a chat!</h3>
           <h4 className={classes.subtitle}>
             I'm currently open to new opportunities.
           </h4>

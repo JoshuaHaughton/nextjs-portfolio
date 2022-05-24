@@ -30,7 +30,7 @@ const ContactButton = () => {
           <FontAwesomeIcon icon={faEnvelope} />
         </button>
       ) : (
-        <Link href={"#"}>
+        <Link href={"#"} passHref>
           <button
             className={buttonClasses}
             onClick={() => dispatch(modalActions.toggleModal())}
