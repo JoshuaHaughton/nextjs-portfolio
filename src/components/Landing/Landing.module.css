@@ -116,8 +116,8 @@
 
 .social_link:hover {
   box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.25);
-  transform: scale(1.1);
-  filter: brightness(0.85);
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .social_link:active {
