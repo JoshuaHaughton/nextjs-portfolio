@@ -34,7 +34,7 @@ const Landing = () => {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: 0.4,
+              delay: 0.6,
               timeConstant: 1200,
             },
           },
@@ -53,7 +53,8 @@ const Landing = () => {
               scale: 1,
               opacity: 1,
               transition: {
-                delay: 0.1,
+                delay: 0.6,
+                timeConstant: 1200,
               },
             },
           }}
@@ -136,12 +137,13 @@ const Landing = () => {
         initial="hidden"
         animate="visible"
         variants={{
-          hidden: { scale: 0.8, opacity: 0 },
+          hidden: { scale: 1, opacity: 0 },
           visible: {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: 0.1,
+              delay: 0.8,
+              timeConstant: 1200
             },
           },
         }}
