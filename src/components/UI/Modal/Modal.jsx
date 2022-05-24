@@ -136,7 +136,7 @@ export default function Modal() {
             </span>
           </h4>
           <p className={classes.paragraph}>
-            I'm a 21 year-old
+            I&apos;m a 21 year-old
             <span className={`${classes.secondary} ${classes.bold}`}>
               {" "}
               fullstack software engineer
@@ -325,7 +325,7 @@ powerful passion to innovate, create, and improve. */}
           />
           <h3 className={classes.title}>Let&apos;s have a chat!</h3>
           <h4 className={classes.subtitle}>
-            I'm currently open to new opportunities.
+            I&apos;m currently open to new opportunities.
           </h4>
 
           <form onSubmit={contactMe} id="contact_form" ref={form}>
