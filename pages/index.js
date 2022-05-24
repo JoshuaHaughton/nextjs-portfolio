@@ -1,9 +1,9 @@
 import Head from "next/head";
-import ContactButton from "../src/components/ContactButton/ContactButton";
-import FixedDarkModeButton from "../src/components/FixedDarkModeButton/FixedDarkModeButton";
-import Landing from "../src/components/Landing/Landing";
-import Modal from "../src/components/Modal/Modal";
-import Projects from "../src/components/Projects/Projects";
+import ContactButton from "../src/components/UI/ContactButton/ContactButton";
+import FixedDarkModeButton from "../src/components/UI/FixedDarkModeButton/FixedDarkModeButton";
+import Landing from "../src/components/Page-Layout/Landing/Landing";
+import Modal from "../src/components/UI/Modal/Modal";
+import Projects from "../src/components/Page-Layout/Projects/Projects";
 import classes from "../styles/Home.module.css";
 
 export default function Home() {

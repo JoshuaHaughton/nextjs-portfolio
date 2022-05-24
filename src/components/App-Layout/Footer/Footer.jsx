@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Footer.module.css";
-import Logo from "../../../public/logo.svg";
+import Logo from "../../../../public/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { modalActions } from "../../store/modal";
+import { modalActions } from "../../../store/modal";
 
 const Footer = () => {
   const showModal = useSelector((state) => state.modal.showModal);

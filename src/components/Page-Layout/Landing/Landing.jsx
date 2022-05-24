@@ -2,13 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
-import LinkedinLogo from "../../../public/linkedin-logo.svg";
-import GithubLogo from "../../../public/github-logo.svg";
+import LinkedinLogo from "../../../../public/linkedin-logo.svg";
+import GithubLogo from "../../../../public/github-logo.svg";
 import classes from "./Landing.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { modalActions } from "../../store/modal";
-import LandingCanvas from "../Canvas/LandingCanvas";
+import { modalActions } from "../../../store/modal";
+import LandingCanvas from "../../UI/Canvas/LandingCanvas";
 import { motion } from "framer-motion";
 
 const Landing = () => {

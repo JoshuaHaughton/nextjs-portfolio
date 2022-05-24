@@ -3,8 +3,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./ContactButton.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { modalActions } from "../../store/modal";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import { modalActions } from "../../../store/modal";
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import Link from "next/link";
 
 const ContactButton = () => {

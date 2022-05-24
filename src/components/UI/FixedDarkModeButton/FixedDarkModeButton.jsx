@@ -3,7 +3,7 @@ import { faAdjust } from "@fortawesome/free-solid-svg-icons";
 import classes from "./FixedDarkModeButton.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
-import { darkModeActions } from "../../store/darkMode";
+import { darkModeActions } from "../../../store/darkMode";
 
 const FixedDarkModeButton = () => {
   const showModal = useSelector((state) => state.modal.showModal);

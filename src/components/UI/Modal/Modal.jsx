@@ -2,18 +2,18 @@ import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useRef } from "react";
 import classes from "./Modal.module.css";
-import nextjsIcon from "../../../public/next-js-icon.svg";
-import typescriptIcon from "../../../public/typescript.svg";
-import mongoDBIcon from "../../../public/mongodb-icon.svg";
-import firebaseIcon from "../../../public/firebase-icon.svg";
+import nextjsIcon from "../../../../public/next-js-icon.svg";
+import typescriptIcon from "../../../../public/typescript.svg";
+import mongoDBIcon from "../../../../public/mongodb-icon.svg";
+import firebaseIcon from "../../../../public/firebase-icon.svg";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
-import { modalActions } from "../../store/modal";
+import { modalActions } from "../../../store/modal";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
-import LinkedinLogo from "../../../public/linkedin-logo.svg";
-import GithubLogo from "../../../public/github-logo.svg";
+import LinkedinLogo from "../../../../public/linkedin-logo.svg";
+import GithubLogo from "../../../../public/github-logo.svg";
 
 export default function Modal() {
   const [loading, setLoading] = useState(false);

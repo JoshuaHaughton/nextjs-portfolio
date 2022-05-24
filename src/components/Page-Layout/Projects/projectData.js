@@ -1,8 +1,8 @@
-import EcomProjectPhoto from "../../../public/Ecom-Project.png";
-import WatchlistProjectPhoto from "../../../public/Watchlist-Project.png";
-import LinkedinProjectPhoto from "../../../public/LinkedIn-Remake.png";
-import CryptoProjectPhoto from "../../../public/Crypto-Project.png";
-import AirbnbProjectPhoto from "../../../public/Airbnb-Remake.png";
+import EcomProjectPhoto from "../../../../public/Ecom-Project.png";
+import WatchlistProjectPhoto from "../../../../public/Watchlist-Project.png";
+import LinkedinProjectPhoto from "../../../../public/LinkedIn-Remake.png";
+import CryptoProjectPhoto from "../../../../public/Crypto-Project.png";
+import AirbnbProjectPhoto from "../../../../public/Airbnb-Remake.png";
 
 const projects = [
   {

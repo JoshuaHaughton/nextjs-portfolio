@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Nav.module.css";
-import logo from "../../../public/logo.svg";
+import logo from "../../../../public/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
-import { modalActions } from "../../store/modal";
-import { darkModeActions } from "../../store/darkMode";
+import { modalActions } from "../../../store/modal";
+import { darkModeActions } from "../../../store/darkMode";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {

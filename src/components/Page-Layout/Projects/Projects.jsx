@@ -1,7 +1,7 @@
-import ProjectCard from "../ProjectCard/ProjectCard";
 import classes from "./Projects.module.css";
 import projects from "./projectData";
 import { useSelector } from "react-redux";
+import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 
 const Projects = () => {
   const showModal = useSelector((state) => state.modal.showModal);
