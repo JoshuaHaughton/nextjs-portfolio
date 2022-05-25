@@ -14,6 +14,12 @@ import Link from "next/link";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import LinkedinLogo from "../../../../public/linkedin-logo.svg";
 import GithubLogo from "../../../../public/github-logo.svg";
+import htmlIcon from "../../../../public/html.svg";
+import cssIcon from "../../../../public/css.svg";
+import javascriptIcon from "../../../../public/javascript.svg";
+import reactIcon from "../../../../public/react.svg";
+import nodeIcon from "../../../../public/node.svg";
+import postgresqlIcon from "../../../../public/postgresql.svg";
 
 export default function Modal() {
   const [loading, setLoading] = useState(false);
@@ -173,7 +179,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                  src={htmlIcon}
                   alt="Html Logo"
                   className={classes.language_img}
                   priority={true}
@@ -188,7 +194,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                  src={cssIcon}
                   alt="CSS Logo"
                   className={classes.language_img}
                   priority={true}
@@ -203,8 +209,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
-                  alt="JavaScript Logo"
+                  src={javascriptIcon}
                   className={classes.language_img}
                   priority={true}
                   quality={100}
@@ -217,7 +222,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                  src={reactIcon}
                   alt="React Logo"
                   className={classes.language_img}
                   priority={true}
@@ -261,7 +266,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png"
+                  src={nodeIcon}
                   alt="Node Logo"
                   className={classes.language_img}
                   priority={true}
@@ -291,7 +296,7 @@ powerful passion to innovate, create, and improve. */}
               <figure>
                 <Image
                   layout="fill"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/993px-Postgresql_elephant.svg.png"
+                  src={postgresqlIcon}
                   alt="PostgreSQL Logo"
                   className={classes.language_img}
                   priority={true}

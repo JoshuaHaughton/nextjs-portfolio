@@ -148,7 +148,7 @@ const Landing = () => {
           },
         }}
       >
-        <Link href="#projects">
+        <Link href="#techstack">
           <a className={classes.scroll}>
             <div className={classes.scroll_icon}></div>
           </a>

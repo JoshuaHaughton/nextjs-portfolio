@@ -2,10 +2,11 @@ import classes from "./ProjectCard.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleDown, faCircleChevronDown, faLink } from "@fortawesome/free-solid-svg-icons";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const ProjectCard = ({
   darkMode,
@@ -17,7 +18,24 @@ const ProjectCard = ({
   demoLink,
   primary,
   secondary,
+  projectNumber
 }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
+  let buttonDestination;
+
+  projectNumber > 4 ? buttonDestination = '#contact' : buttonDestination = `#project${projectNumber + 1}`; 
+
+
+
   let projectClasses = classes.project;
 
   darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`);
@@ -35,6 +53,10 @@ const ProjectCard = ({
     }
   }, [controls, inView]);
 
+  const nextProjectHandler = () => {
+
+  }
+
   return (
     <motion.div
       ref={ref}
@@ -43,7 +65,7 @@ const ProjectCard = ({
       variants={cardVariants}
       className="square"
     >
-      <li className={projectClasses}>
+      <li className={projectClasses} id={`project${projectNumber}`}>
         <div className={classes.project_wrapper}>
           <Image
             src={projectImage}
@@ -78,6 +100,17 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
+
+        <Link href={buttonDestination}>
+          <a className={classes.button_wrapper} >
+            <FontAwesomeIcon icon={faCircleChevronDown} className={classes.next_project} onClick={nextProjectHandler} style={{
+            color: isHovering ? primary : 'black',
+          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}/>
+
+          </a>
+        </Link>
         <style jsx>{`
           h3 {
             color: #${primary};
@@ -86,6 +119,9 @@ const ProjectCard = ({
             color: #${secondary};
           }
           a:hover {
+            color: #${primary};
+          }
+          a > svg:hover {
             color: #${primary};
           }
         `}</style>

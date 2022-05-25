@@ -1,6 +1,7 @@
 .project {
   margin-bottom: 125px;
   margin-top: 125px;
+  padding-top: 24px;
   list-style-type: none;
   transition: all 300ms ease;
 }
@@ -114,6 +115,31 @@
 
 .description_paragraph {
   margin: 16px 0;
+}
+
+.button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.next_project {
+  /* background-color: red; */
+  margin: auto;
+  font-size: 60px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: #1f59ed;
+}
+
+.next_project:hover {
+  transform: scale(1.1);
+}
+
+.next_project:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
