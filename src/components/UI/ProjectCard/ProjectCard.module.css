@@ -38,6 +38,10 @@
   border: 2px solid #fff;
 }
 
+.darkMode > a > svg {
+  color: #fff;
+}
+
 .image {
   transition: all 400ms ease;
 }
@@ -131,7 +135,7 @@
   font-size: 60px;
   transition: all 300ms ease;
   cursor: pointer;
-  color: #1f59ed;
+  color: black;
 }
 
 .next_project:hover {

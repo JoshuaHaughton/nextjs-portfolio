@@ -104,7 +104,7 @@ const ProjectCard = ({
         <Link href={buttonDestination}>
           <a className={classes.button_wrapper} >
             <FontAwesomeIcon icon={faCircleChevronDown} className={classes.next_project} onClick={nextProjectHandler} style={{
-            color: isHovering ? primary : 'black',
+            color: isHovering && primary,
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}/>
