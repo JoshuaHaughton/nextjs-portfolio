@@ -42,6 +42,7 @@ const TechStack = () => {
   };
 
   return (
+
     <motion.div
       ref={ref}
       animate={controls}
@@ -49,244 +50,249 @@ const TechStack = () => {
       variants={cardVariants}
       className="square"
     >
-      <div className={projectsClasses} id="techstack">
-        <div className={classes.row}>
-          <h1>
-            {/* <h1 className={classes.secondary}> */}
-            <span className={classes.secondary}>
-            Tech
-            </span>
-             {" "}I've worked with
-
-          </h1>
-          {/* <h4 className={classes.subtitle}>
-            <b>Thanks for checking out my portfolio!</b>
-          </h4> */}
-
-          <h4 className={classes.subtitle}>
-            I love learning new tech, but these are the technologies that I'm currently the <b>most comfortable with:</b>
-          </h4>
-
-
-          <div className={classes.bothTech}>
-            <div className={classes.frontend}>
-              {/* <h3>Frontend Technonlogies</h3> */}
-              <div className={classes.techWrapper}>
-              <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={htmlIcon}
-                      alt="HTML Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>HTML5</span>
-                </figure>
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={cssIcon}
-                      alt="CSS Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>CSS3</span>
-                </figure>
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={javascriptIcon}
-                      alt="JavaScript Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>JavaScript</span>
-                </figure>
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={reactIcon}
-                      alt="React Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>React</span>
-                </figure>
-                
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={reduxIcon}
-                      alt="Redux Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>Redux</span>
-                </figure>
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={nextjsIcon}
-                      alt="Next.Js Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>Next.js</span>
-                </figure>
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={typescriptIcon}
-                      alt="Typescript Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>TypeScript</span>
-                </figure>
-
-
-
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={nodeIcon}
-                      alt="Node.js Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>Node/Express.js</span>
-                </figure>
-                
-               
-
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={mongoDBIcon}
-                      alt="MongoDB Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>MongoDB</span>
-                </figure>
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={postgresqlIcon}
-                      alt="PostgreSQL Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>PostgreSQL</span>
-                </figure>
-
-                
-
-               
-
-
-                
-
-                
-          
-              </div>
-            </div>
-
-            {/* <div className={classes.backend}>
-            <h3>Backend Technonlogies</h3>
-              <div className={classes.techWrapper}>
-
-              <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={nodeIcon}
-                      alt="Next.Js Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>Node/Express</span>
-                </figure>
-                
-               
-
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={mongoDBIcon}
-                      alt="Next.Js Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>MongoDB</span>
-                </figure>
-
-                <figure className={classes.tech}>
-                  <Image
-                      layout="fill"
-                      src={firebaseIcon}
-                      alt="Next.Js Logo"
-                      className={classes.language_img}
-                      priority={true}
-                      quality={100}
-                      // unoptimized={true}
-                    />
-                    <span className={classes.language_name}>Firebase</span>
-                </figure>
-
-
-               
-
-              
-
-
-               
-              
-              </div>
+      <div  id="techstack">
+        <div className={projectsClasses}>
+          <div className={classes.row}>
+            {/* <div className={classes.background}>
 
             </div> */}
+            <h1>
+              {/* <h1 className={classes.secondary}> */}
+              <span className={classes.secondary}>
+              Tech
+              </span>
+              {" "}I've worked with
+
+            </h1>
+            {/* <h4 className={classes.subtitle}>
+              <b>Thanks for checking out my portfolio!</b>
+            </h4> */}
+
+            <h4 className={classes.subtitle}>
+              I love learning new tech, but these are the technologies that I'm currently the <b>most comfortable with:</b>
+            </h4>
 
 
+            <div className={classes.bothTech}>
+              <div className={classes.frontend}>
+                {/* <h3>Frontend Technonlogies</h3> */}
+                <div className={classes.techWrapper}>
+                <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={htmlIcon}
+                        alt="HTML Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>HTML5</span>
+                  </figure>
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={cssIcon}
+                        alt="CSS Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>CSS3</span>
+                  </figure>
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={javascriptIcon}
+                        alt="JavaScript Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>JavaScript</span>
+                  </figure>
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={reactIcon}
+                        alt="React Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>React</span>
+                  </figure>
+                  
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={reduxIcon}
+                        alt="Redux Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>Redux</span>
+                  </figure>
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={nextjsIcon}
+                        alt="Next.Js Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>Next.js</span>
+                  </figure>
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={typescriptIcon}
+                        alt="Typescript Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>TypeScript</span>
+                  </figure>
+
+
+
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={nodeIcon}
+                        alt="Node.js Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>Node/Express.js</span>
+                  </figure>
+                  
+                
+
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={mongoDBIcon}
+                        alt="MongoDB Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>MongoDB</span>
+                  </figure>
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={postgresqlIcon}
+                        alt="PostgreSQL Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>PostgreSQL</span>
+                  </figure>
+
+                  
+
+                
+
+
+                  
+
+                  
+            
+                </div>
+              </div>
+
+              {/* <div className={classes.backend}>
+              <h3>Backend Technonlogies</h3>
+                <div className={classes.techWrapper}>
+
+                <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={nodeIcon}
+                        alt="Next.Js Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>Node/Express</span>
+                  </figure>
+                  
+                
+
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={mongoDBIcon}
+                        alt="Next.Js Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>MongoDB</span>
+                  </figure>
+
+                  <figure className={classes.tech}>
+                    <Image
+                        layout="fill"
+                        src={firebaseIcon}
+                        alt="Next.Js Logo"
+                        className={classes.language_img}
+                        priority={true}
+                        quality={100}
+                        // unoptimized={true}
+                      />
+                      <span className={classes.language_name}>Firebase</span>
+                  </figure>
+
+
+                
+
+                
+
+
+                
+                
+                </div>
+
+              </div> */}
+
+
+            </div>
+
+
+
+            {/* <button
+              onClick={() => dispatch(modalActions.toggleModal())}
+              className={classes.button}
+            >
+              Say Hello
+            </button> */}
           </div>
-
-
-
-          {/* <button
-            onClick={() => dispatch(modalActions.toggleModal())}
-            className={classes.button}
-          >
-            Say Hello
-          </button> */}
         </div>
       </div>
     </motion.div>

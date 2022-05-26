@@ -41,8 +41,8 @@ const ProjectCard = ({
   darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`);
 
   const cardVariants = {
-    visible: { opacity: 1, transition: { duration: 0.35 } },
-    hidden: { opacity: 0.25 },
+    visible: { opacity: 1, transition: { duration: 0.55 } },
+    hidden: { opacity: 0.15 },
   };
 
   const controls = useAnimation();
@@ -63,7 +63,7 @@ const ProjectCard = ({
       animate={controls}
       initial="hidden"
       variants={cardVariants}
-      className="square"
+      className={classes.square}
     >
       <li className={projectClasses} id={`project${projectNumber}`}>
         <div className={classes.project_wrapper}>

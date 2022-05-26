@@ -306,6 +306,7 @@
   z-index: 101;
   transition: all 300ms ease;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .modal_exit:hover {

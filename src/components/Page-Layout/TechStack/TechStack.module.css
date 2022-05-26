@@ -1,7 +1,13 @@
+
+
 .container {
   padding: 40px 0 8px 0;
   width: 100%;
   transition: all 900ms ease;
+  position: relative;
+  background-color: #fff;
+  background: linear-gradient(rgb(245, 245, 245), #fff);
+  z-index: 5;
 }
 
 .showModal {
@@ -113,20 +119,23 @@
   align-items: center;
   justify-content: center;
   transition: all 450ms ease;
+  z-index: 100;
   /* padding: 8px; */
 }
 
 .language_name {
   position: absolute;
   bottom: -32px;
-  transform: scale(0);
+  /* transform: scale(0); */
+  opacity: 0;
   transition: all 450ms ease;
   text-align: center;
   /* margin: 0 auto; */
 }
 
 .tech:hover .language_name {
-  transform: scale(1);
+  /* transform: scale(1); */
+  opacity: 1;
 }
 
 .tech:hover {
