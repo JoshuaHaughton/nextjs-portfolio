@@ -11,6 +11,10 @@
   margin-bottom: 32px;
 }
 
+.project:first-child {
+  margin-top: 32px;
+}
+
 .description {
   position: absolute;
   top: 50%;

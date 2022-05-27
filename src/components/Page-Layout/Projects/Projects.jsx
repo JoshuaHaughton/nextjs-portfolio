@@ -21,20 +21,31 @@ const Projects = () => {
   return (
     <div className={projectsClasses} id="projects">
       <div className={classes.row}>
-        <div className={classes.background}></div>
+      <Link href={"#project1"}>
+              <a className={classes.first_button_wrapper}>
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className={classes.first_project}
+                />
+                 <span className={classes.button_name}>To Projects</span>
+              </a>
+            </Link>
+        <div className={classes.background}>
+          <div className={classes.background_content}></div>
+        </div>
         <h1>
           Here are some of my
           <span className={classes.secondary}>
             {" "}
             projects{" "}
-            <Link href={"#project1"}>
+            {/* <Link href={"#project1"}>
               <a className={classes.button_wrapper}>
                 <FontAwesomeIcon
                   icon={faChevronDown}
                   className={classes.project_button}
                 />
               </a>
-            </Link>
+            </Link> */}
           </span>
         </h1>
         <ul>
