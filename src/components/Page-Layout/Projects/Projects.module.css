@@ -1,7 +1,7 @@
 .background::before {
   content: "";
   position: absolute;
-  background-image: url('../../../../public/wave.svg');
+  background-image: url("../../../../public/wave.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -37,7 +37,8 @@
 }
 
 .darkMode > div > .background::before {
-  filter: invert(100%) invert(37%) sepia(5%) saturate(4%) hue-rotate(15deg) brightness(97%) contrast(85%);
+  filter: invert(100%) invert(37%) sepia(5%) saturate(4%) hue-rotate(15deg)
+    brightness(97%) contrast(85%);
 }
 
 .darkMode > div > .background > .background_content {
@@ -89,7 +90,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .button_wrapper {
@@ -114,7 +114,7 @@
 }
 
 .first_button_wrapper {
-  z-index: 1000;
+  z-index: 10;
   position: absolute;
   top: -75px;
   left: 50%;
@@ -141,7 +141,7 @@
 .button_name {
   position: absolute;
   bottom: 20%;
-  left: 40px;
+  right: 40px;
   opacity: 0;
   transition: all 450ms ease;
   text-align: center;
@@ -154,15 +154,9 @@
 }
 
 .first_button_wrapper:hover .button_name {
-  /* transform: scale(1); */
   opacity: 1;
-  left: 72px;
+  right: 80px;
 }
-
-/* .first_project:hover {
-  filter: brightness(90%);
-  transform: scale(0.9);
-} */
 
 @media (max-width: 975px) {
   .background {
@@ -175,7 +169,6 @@
 }
 
 @media (max-width: 875px) {
-
   .showModal {
     animation: slideout 0.5s forwards;
     height: 0px;
@@ -212,6 +205,4 @@
   .project_button {
     font-size: 40px;
   }
-
-
 }

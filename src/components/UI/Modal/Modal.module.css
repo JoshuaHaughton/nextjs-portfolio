@@ -505,6 +505,9 @@
   .language {
     width: 25%;
   }
+  .social_list {
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -513,5 +516,9 @@
   }
   .modal_exit {
     font-size: 36px;
+  }
+
+  .social_list {
+    margin-top: 12px;
   }
 }

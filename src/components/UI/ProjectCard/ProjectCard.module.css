@@ -40,6 +40,7 @@
   overflow: hidden;
   display: flex;
   transition: all 450ms ease;
+  /* border: 2px solid #000; */
   /* border: 2px solid #fff; */
   /* border: 2px solid transparent; */
 }
@@ -48,7 +49,7 @@
   border: 2px solid #fff;
 }
 
-.darkMode > a > svg {
+.darkMode > a {
   color: #fff;
 }
 
@@ -132,11 +133,12 @@
 }
 
 .button_wrapper {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 90px;
+  /* margin-top: 90px; */
+  margin: 90px auto 0 auto;
 }
 
 .next_project {
@@ -145,7 +147,7 @@
   font-size: 60px;
   transition: all 300ms ease;
   cursor: pointer;
-  color: black;
+  /* color: black; */
 }
 
 .next_project:hover {
@@ -154,6 +156,14 @@
 
 .next_project:active {
   transform: scale(0.95);
+}
+
+@media(max-width:890px) {
+  .description {
+    left: 70px;
+    padding-right: 16px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -165,6 +175,7 @@
 
   .description_paragraph {
     padding-right: 40px;
+    font-size: 15px;
   }
 
   .title {

@@ -2,7 +2,7 @@ import classes from "./ProjectCard.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAngleDoubleDown, faCircleChevronDown, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faCircleChevronDown, faLink } from "@fortawesome/free-solid-svg-icons";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
@@ -40,6 +40,8 @@ const ProjectCard = ({
 
   darkMode && (projectClasses = `${projectClasses} ${classes.darkMode}`);
 
+
+
   const cardVariants = {
     visible: { opacity: 1, transition: { duration: 0.55 } },
     hidden: { opacity: 0.15 },
@@ -50,12 +52,13 @@ const ProjectCard = ({
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.stop()
+    }
+    return () => {
+      controls.stop()
     }
   }, [controls, inView]);
-
-  const nextProjectHandler = () => {
-
-  }
 
   return (
     <motion.div
@@ -103,9 +106,10 @@ const ProjectCard = ({
 
         <Link href={buttonDestination}>
           <a className={classes.button_wrapper} >
-            <FontAwesomeIcon icon={faCircleChevronDown} className={classes.next_project} onClick={nextProjectHandler} style={{
-            color: isHovering && primary,
-          }}
+            <FontAwesomeIcon icon={faCircleChevronDown} className={classes.next_project} 
+          //   style={{
+          //   color: isHovering && primary,
+          // }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}/>
 
@@ -119,10 +123,7 @@ const ProjectCard = ({
             color: #${secondary};
           }
           a:hover {
-            color: #${primary};
-          }
-          a > svg:hover {
-            color: #${primary};
+            color: #${primary} !important;
           }
         `}</style>
       </li>

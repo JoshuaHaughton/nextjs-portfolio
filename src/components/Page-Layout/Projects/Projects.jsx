@@ -3,10 +3,7 @@ import projects from "./projectData";
 import { useSelector } from "react-redux";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faCircleArrowDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const Projects = () => {
@@ -21,32 +18,21 @@ const Projects = () => {
   return (
     <div className={projectsClasses} id="projects">
       <div className={classes.row}>
-      <Link href={"#project1"}>
-              <a className={classes.first_button_wrapper}>
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className={classes.first_project}
-                />
-                 <span className={classes.button_name}>To Projects</span>
-              </a>
-            </Link>
+        <Link href={"#project1"}>
+          <a className={classes.first_button_wrapper}>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className={classes.first_project}
+            />
+            <span className={classes.button_name}>To Projects</span>
+          </a>
+        </Link>
         <div className={classes.background}>
           <div className={classes.background_content}></div>
         </div>
         <h1>
           Here are some of my
-          <span className={classes.secondary}>
-            {" "}
-            projects{" "}
-            {/* <Link href={"#project1"}>
-              <a className={classes.button_wrapper}>
-                <FontAwesomeIcon
-                  icon={faChevronDown}
-                  className={classes.project_button}
-                />
-              </a>
-            </Link> */}
-          </span>
+          <span className={classes.secondary}> projects </span>
         </h1>
         <ul>
           {projects.map((project, i) => (
