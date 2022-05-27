@@ -119,18 +119,14 @@
   top: -75px;
   left: 50%;
   transform: translate(-50%, -35%);
-  height: fit-content;
+  width: 70px;
+  height: 80px;
 }
 
 .first_project {
   font-size: 80px;
   color: #242424;
   transition: all 300ms ease;
-}
-
-.first_button_wrapper {
-  width: 70px;
-  height: 80px;
 }
 
 .first_button_wrapper:hover .first_project {
@@ -172,6 +168,10 @@
   .background {
     top: -24px;
   }
+
+  .first_button_wrapper {
+    top: -60px;
+  }
 }
 
 @media (max-width: 875px) {
@@ -212,4 +212,6 @@
   .project_button {
     font-size: 40px;
   }
+
+
 }

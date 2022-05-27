@@ -269,8 +269,18 @@
   }
 }
 
+@media(max-width: 390px) {
+  .techWrapper {
+    padding-bottom: 24px;
+  }
+}
+
 @media(max-width: 330px) {
   .row > h1 {
     font-size: 12vw;
+  }
+
+  .techWrapper {
+    padding-bottom: 24px;
   }
 }
