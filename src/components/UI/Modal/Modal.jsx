@@ -2,10 +2,6 @@ import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useRef } from "react";
 import classes from "./Modal.module.css";
-import nextjsIcon from "../../../../public/next-js-icon.svg";
-import typescriptIcon from "../../../../public/typescript.svg";
-import mongoDBIcon from "../../../../public/mongodb-icon.svg";
-import firebaseIcon from "../../../../public/firebase-icon.svg";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../../../store/modal";
@@ -14,12 +10,8 @@ import Link from "next/link";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import LinkedinLogo from "../../../../public/linkedin-logo.svg";
 import GithubLogo from "../../../../public/github-logo.svg";
-import htmlIcon from "../../../../public/html.svg";
-import cssIcon from "../../../../public/css.svg";
-import javascriptIcon from "../../../../public/javascript.svg";
-import reactIcon from "../../../../public/react.svg";
-import nodeIcon from "../../../../public/node.svg";
-import postgresqlIcon from "../../../../public/postgresql.svg";
+import ModalLanguages from "../ModalLanguages/ModalLanguages";
+import ModalLanguageData from "./ModalLanguageData";
 
 export default function Modal() {
   const [loading, setLoading] = useState(false);
@@ -147,178 +139,48 @@ export default function Modal() {
               {" "}
               fullstack software engineer
             </span>{" "}
-            with a passion for building apps and websites with an exceptional
+            with a passion for building apps that provide an
             <span className={`${classes.secondary} ${classes.bold}`}>
               {" "}
-              user experience.
+              exceptional user experience.
             </span>
             <br />
-            {/* Getting a taste of software development through multiple frontend internships has left me with a
-powerful passion to innovate, create, and improve. */}
-            {/* I currently work as a freelance digital marketer, but I spend every
-            chance I get upgrading my coding skills. */}
             <br />
-            As a former digital marketer, the
+            As a former digital marketer, I&apos;ve acquired skills like
             <span className={`${classes.secondary} ${classes.bold}`}>
               {" "}
-              copywriting, user-based design,{" "}
+              user-based design, customer psychology{" "}
             </span>
             and
             <span className={`${classes.secondary} ${classes.bold}`}>
               {" "}
-              customer psychology skills
+              copywriting
             </span>{" "}
-            I&apos;ve acquired through marketing for small-mid sized businesses have
-            been essential in allowing me to quickly learn how to craft
-            interfaces that are extremely visually appealing to users.
+            through marketing for small/mid-sized E-commerce businesses. These
+            skills have been{" "}
+            <span className={`${classes.secondary} ${classes.bold}`}>
+              {" "}
+              essential
+            </span>{" "}
+            in allowing me to quickly learn how to craft interfaces that are{" "}
+            <span className={`${classes.secondary} ${classes.bold}`}>
+              visually appealing to users.
+            </span>
           </p>
 
           <br />
           <div className={classes.languages}>
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={htmlIcon}
-                  alt="Html Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                  objectFit={"contain"}
+            {ModalLanguageData.map(
+              ({ src, languageName, languagePopup }, i) => (
+                <ModalLanguages
+                  key={i}
+                  src={src}
+                  languageName={languageName}
+                  languagePopup={languagePopup}
+                  darkMode={darkMode}
                 />
-              </figure>
-              <span className={classes.language_name}>HTML</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={cssIcon}
-                  alt="CSS Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-
-              <span className={classes.language_name}>CSS</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={javascriptIcon}
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-              <span className={classes.language_name}>JavaScript</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={reactIcon}
-                  alt="React Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-              <span className={classes.language_name}>React.js</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={nextjsIcon}
-                  alt="Next.Js Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-
-              <span className={classes.language_name}>Next.js</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={typescriptIcon}
-                  alt="Typescript Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-
-              <span className={classes.language_name}>Typescript</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={nodeIcon}
-                  alt="Node Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                  objectFit={"contain"}
-                />
-              </figure>
-              <span className={classes.language_name}>Node/Express</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={mongoDBIcon}
-                  alt="MongoDB Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-
-              <span className={classes.language_name}>MongoDB</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={postgresqlIcon}
-                  alt="PostgreSQL Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-              <span className={classes.language_name}>PostgreSQL</span>
-            </div>
-
-            <div className={classes.language}>
-              <figure>
-                <Image
-                  layout="fill"
-                  src={firebaseIcon}
-                  alt="Firebase Logo"
-                  className={classes.language_img}
-                  priority={true}
-                  quality={100}
-                />
-              </figure>
-              <span className={classes.language_name}>Firebase</span>
-            </div>
+              ),
+            )}
           </div>
         </div>
 
@@ -361,7 +223,6 @@ powerful passion to innovate, create, and improve. */}
               <textarea
                 type="text"
                 className={classes.textarea}
-                // className={classes.input}
                 name="message"
                 required
                 onChange={(e) => setTextareaInput(e.target.value)}

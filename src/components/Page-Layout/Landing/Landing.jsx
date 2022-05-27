@@ -65,24 +65,17 @@ const Landing = () => {
               {" "}
               I&apos;m Josh.
             </h1>
-            {/* <h1 className={classes.greeting}>Hey, <br/> <span className={classes.secondary}>I'm Josh.</span></h1> */}
-
             <p className={classes.landing_description}>
-              {/* I love to build  */}
-              I&apos;m a fullstack developer with a passion for <b className={classes.secondary}>creating apps</b> and
-              <b className={classes.secondary}> enhancing user experiences</b> through <br/>frontend technology like
-              {/* beautiful  */}
+              I&apos;m a fullstack developer with a passion for{" "}
+              <b className={classes.secondary}>creating apps</b> and
               <b className={classes.secondary}>
                 {" "}
-                 React
-              </b> and
-              <b className={classes.secondary}>
-                {" "}
-                 Next.js.
-              </b>
-              {/* <br /> */}
-              {/* looking to transition my passion for frontend
-              development and user experience into a career as a */}
+                enhancing user experiences
+              </b>{" "}
+              through <br />
+              frontend technology like
+              <b className={classes.secondary}> React</b> and
+              <b className={classes.secondary}> Next.js.</b>
               <br />
               Here&apos;s a bit more
               <b
@@ -92,7 +85,6 @@ const Landing = () => {
                 {" "}
                 about me:
               </b>
-              {/* <b className="secondary header__description--hover" onclick="toggleModal()">about me:</b> */}
             </p>
             <div className={classes.socials_list}>
               <Link href="https://www.linkedin.com/in/joshua-haughton-5ba15a22b/">
@@ -104,7 +96,7 @@ const Landing = () => {
                     className={classes.social_logo}
                     priority={true}
                     quality={100}
-                    alt="Linkedin Logo"
+                    alt="LinkedIn Logo"
                   />
                 </a>
               </Link>
@@ -132,28 +124,11 @@ const Landing = () => {
           </div>
         </motion.div>
       </header>
-
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { scale: 1, opacity: 0 },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              delay: 0.8,
-              timeConstant: 1200
-            },
-          },
-        }}
-      >
         <Link href="#techstack">
           <a className={classes.scroll}>
             <div className={classes.scroll_icon}></div>
           </a>
         </Link>
-      </motion.div>
     </div>
   );
 };

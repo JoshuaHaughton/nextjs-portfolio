@@ -63,7 +63,6 @@ const Footer = () => {
 
             <Link href={"/JoshuaHaughtonResume.pdf"}>
               <a
-                // href="./assets/Joshua Haughton Resume.pdf"
                 target="_blank"
                 className={classes.social_link}
               >

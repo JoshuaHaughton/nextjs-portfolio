@@ -21,24 +21,24 @@
   background-color: rgba(36, 36, 36, 0.9);
 }
 
-.darkMode > div > .scroll > .scroll_icon {
+.darkMode > .scroll > .scroll_icon {
   border: 3px solid #fff;
 }
 
-.darkMode > div > .scroll > .scroll_icon:after {
+.darkMode > .scroll > .scroll_icon:after {
   background-color: #fff;
 }
 
-.darkMode > div > .scroll > .scroll_icon:hover {
+.darkMode > .scroll > .scroll_icon:hover {
   transform: scale(1.1);
   background-color: #fff;
 }
 
-.darkMode > div > .scroll > .scroll_icon:hover:after {
+.darkMode > .scroll > .scroll_icon:hover:after {
   background-color: #242424;
 }
 
-.darkMode > div > .scroll > .scroll_icon:active {
+.darkMode > .scroll > .scroll_icon:active {
   transform: scale(0.9);
 }
 

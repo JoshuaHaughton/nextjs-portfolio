@@ -21,7 +21,7 @@
   left: 90px;
   transform: translateY(100%);
   opacity: 0;
-  transition: opacity 300ms ease, transform 550ms ease;
+  transition: opacity 300ms ease, transform 600ms ease;
   color: white;
   max-width: 600px;
 }
@@ -36,13 +36,9 @@
   z-index: 10;
   border-radius: 20px;
   box-shadow: 0 20px 56px 0 rgb(0, 0, 0, 0.45);
-  /* filter: drop-shadow(0 20px 56px rgba(0, 0, 0, 0.45)); */
   overflow: hidden;
   display: flex;
   transition: all 450ms ease;
-  /* border: 2px solid #000; */
-  /* border: 2px solid #fff; */
-  /* border: 2px solid transparent; */
 }
 
 .darkMode > .project_wrapper {
@@ -75,7 +71,7 @@
 }
 
 .project_wrapper:hover .project_background {
-  opacity: 0.95;
+  opacity: 0.98;
 }
 
 .title {

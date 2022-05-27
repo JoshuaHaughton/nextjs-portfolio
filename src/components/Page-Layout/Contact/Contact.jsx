@@ -21,6 +21,13 @@ const Contact = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      // controls.stop()
+      controls.start("hidden")
+    }
+    return () => {
+      controls.stop()
+      // controls.start("hidden")
     }
   }, [controls, inView]);
 

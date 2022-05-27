@@ -16,10 +16,10 @@ const Projects = () => {
   darkMode && (projectsClasses = `${projectsClasses} ${classes.darkMode}`);
 
   return (
-    <div className={projectsClasses} id="projects">
+    <div className={projectsClasses} id={"projects"}>
       <div className={classes.row}>
         <Link href={"#project1"}>
-          <a className={classes.first_button_wrapper}>
+          <a className={classes.button_wrapper}>
             <FontAwesomeIcon
               icon={faChevronDown}
               className={classes.first_project}

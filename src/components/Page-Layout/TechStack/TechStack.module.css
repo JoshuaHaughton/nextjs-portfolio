@@ -1,8 +1,6 @@
-
-
 .container {
   padding: 40px 0 8px 0;
-  width: 100%;
+  width: 100vw;
   transition: all 900ms ease;
   position: relative;
   background: linear-gradient(rgb(245, 245, 245), #fff);
@@ -18,24 +16,25 @@
   background: linear-gradient(#242424, rgb(102, 102, 102));
 }
 
-.darkMode > div > h1, .darkMode > div > h4 {
+.darkMode > div > div > h1,
+.darkMode > div > div > h4 {
   color: white;
 }
 
-.darkMode > div > h1:hover {
+.darkMode > div > div > h1:hover {
   color: #1f59ed;
 }
 
-.darkMode > div > .button {
+.darkMode > div > div > .button {
   color: #fff;
 }
 
-.darkMode > div > .button:hover {
+.darkMode > div > div > .button:hover {
   color: #fff;
   border: 2px solid #fff;
 }
 
-.darkMode > div > .bothTech > .frontend > .techWrapper > figure > span {
+.darkMode > div > div > .techWrapper > figure > span {
   color: white;
 }
 
@@ -61,7 +60,6 @@
   font-size: 60px;
   margin-bottom: 24px;
   transition: all 300ms ease;
-  /* color: #1f59ed; */
 }
 
 .row > h1:hover {
@@ -82,7 +80,6 @@
   height: fit-content;
   width: 100%;
   display: flex;
-  /* margin-top: 24px; */
   justify-content: center;
   min-height: 400px;
   padding-bottom: 24px;
@@ -97,21 +94,22 @@
   min-height: 400px;
 }
 
-.frontend > h3, .backend > h3 {
+.frontend > h3,
+.backend > h3 {
   text-align: center;
   margin-bottom: 12px;
 }
 
 .techWrapper {
-  width: 100%;
-  /* background-color: red; */
   position: relative;
-  height: 100%;
-  /* min-height: 300px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: fit-content;
+  min-height: 400px;
+  width: 80%;
+  padding: 16px 0 56px 0;
 }
 
 .tech {
@@ -147,39 +145,7 @@
   transform: scale(0.9);
 }
 
-/* 
-.tech > span > img {
-  height: 20% !important;
-  width: 20% !important;
-  position: relative;
-} */
 
-/* .button {
-  margin-top: 28px;
-  width: 120px;
-  padding: 16px 12px;
-  border: 2px solid #1f59ed;
-  border-radius: 10px;
-  background-color: #1f59ed;
-  cursor: pointer;
-  transition: all 300ms ease;
-  font-weight: 600;
-  font-size: 16px;
-  color: white;
-  box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.3);
-}
-
-.button:hover {
-  transform: scale(1.05);
-  background-color: transparent;
-  border: 2px solid black;
-  color: black;
-  box-shadow: 0 4px 12px 0 rgb(0, 0, 0, 0.25);
-}
-
-.button:active {
-  transform: scale(0.95);
-} */
 
 .button_wrapper {
   position: absolute;
@@ -191,7 +157,7 @@
 
 @media (max-width: 975px) {
   .techWrapper {
-    padding-top: 40px;
+    padding: 40px 0 32px 0;
   }
 
   .tech {
@@ -200,7 +166,6 @@
 }
 
 @media (max-width: 875px) {
-
   .showModal {
     animation: slideout 0.5s forwards;
     height: 0px;
@@ -220,7 +185,7 @@
   }
 }
 
-@media(max-width:750px) {
+@media (max-width: 750px) {
   .bothTech > div {
     width: 100%;
   }
@@ -230,13 +195,6 @@
     width: 64px;
   }
 
-  /* .bothTech {
-    padding-bottom: 0;
-  } */
-
-  /* .techWrapper {
-    padding-top: 40px;
-  } */
 }
 
 @media (max-width: 600px) {
@@ -255,6 +213,10 @@
     font-size: 16px;
     padding: 0 24px;
   }
+
+  .techWrapper {
+    padding: 48px 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -269,13 +231,13 @@
   }
 }
 
-@media(max-width: 390px) {
+@media (max-width: 390px) {
   .techWrapper {
-    padding-bottom: 24px;
+    padding-bottom: 48px;
   }
 }
 
-@media(max-width: 330px) {
+@media (max-width: 330px) {
   .row > h1 {
     font-size: 12vw;
   }
