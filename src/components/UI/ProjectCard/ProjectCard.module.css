@@ -21,7 +21,7 @@
   left: 90px;
   transform: translateY(100%);
   opacity: 0;
-  transition: opacity 300ms, transform 550ms ease;
+  transition: opacity 300ms ease, transform 550ms ease;
   color: white;
   max-width: 600px;
 }
